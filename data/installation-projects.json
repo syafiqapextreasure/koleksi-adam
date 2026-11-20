@@ -2,91 +2,296 @@
   {
     "name": "Masjid Al Amin Batu 9 Kebun Baru",
     "group": "Masjid",
-    "photo": "mosque-kebun-baru"
+    "photo": "mosque-kebun-baru",
+    "photos": [
+      {
+        "file": "mosque-kebun-baru-1",
+        "width": 1024,
+        "height": 768,
+        "stage": "after"
+      },
+      {
+        "file": "mosque-kebun-baru-2",
+        "width": 768,
+        "height": 1024,
+        "stage": "after"
+      },
+      {
+        "file": "mosque-kebun-baru-3",
+        "width": 1024,
+        "height": 768,
+        "stage": "after"
+      },
+      {
+        "file": "mosque-kebun-baru-4",
+        "width": 1024,
+        "height": 768,
+        "stage": "after"
+      },
+      {
+        "file": "mosque-kebun-baru-5",
+        "width": 1024,
+        "height": 768,
+        "stage": "before"
+      },
+      {
+        "file": "mosque-kebun-baru-6",
+        "width": 1024,
+        "height": 768,
+        "stage": "before"
+      },
+      {
+        "file": "mosque-kebun-baru-7",
+        "width": 1024,
+        "height": 768,
+        "stage": "before"
+      },
+      {
+        "file": "mosque-kebun-baru-8",
+        "width": 1024,
+        "height": 768,
+        "stage": "before"
+      }
+    ]
   },
   {
     "name": "Maahad Tahfiz Baitul Hasanah Pahang",
     "group": "Maahad",
-    "photo": "project-maahad-tahfiz-baitul-hasanah-pahang"
+    "photo": "project-maahad-tahfiz-baitul-hasanah-pahang",
+    "photos": [
+      {
+        "file": "maahad-tahfiz-baitul-hasanah-pahang-1",
+        "width": 500,
+        "height": 547,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Masjid Al Falah Jengka 7",
     "group": "Masjid",
-    "photo": "project-masjid-al-falah-jengka-7"
+    "photo": "project-masjid-al-falah-jengka-7",
+    "photos": [
+      {
+        "file": "masjid-al-falah-jengka-7-1",
+        "width": 500,
+        "height": 457,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Masjid Al Ilmi Dengkil",
     "group": "Masjid",
-    "photo": "project-masjid-al-ilmi-dengkil"
+    "photo": "project-masjid-al-ilmi-dengkil",
+    "photos": [
+      {
+        "file": "masjid-al-ilmi-dengkil-1",
+        "width": 500,
+        "height": 500,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Masjid An Nur Temasya Glenmarie Subang",
     "group": "Masjid",
-    "photo": "project-masjid-an-nur-temasya-glenmarie-subang"
+    "photo": "project-masjid-an-nur-temasya-glenmarie-subang",
+    "photos": [
+      {
+        "file": "masjid-an-nur-temasya-glenmarie-subang-1",
+        "width": 500,
+        "height": 431,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Masjid Bandar Bukit Puchong",
     "group": "Masjid",
-    "photo": "project-masjid-bandar-bukit-puchong"
+    "photo": "project-masjid-bandar-bukit-puchong",
+    "photos": [
+      {
+        "file": "masjid-bandar-bukit-puchong-1",
+        "width": 500,
+        "height": 446,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Masjid Dato Dagang Klang",
     "group": "Masjid",
-    "photo": "project-masjid-dato-dagang-klang"
+    "photo": "project-masjid-dato-dagang-klang",
+    "photos": [
+      {
+        "file": "masjid-dato-dagang-klang-1",
+        "width": 500,
+        "height": 435,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Masjid Jamek Sultan Tinggi",
     "group": "Masjid",
-    "photo": "project-masjid-jamek-sultan-tinggi"
+    "photo": "project-masjid-jamek-sultan-tinggi",
+    "fullName": "Masjid Jamek Sultan Hisamuddin, Bandar Baru Salak Tinggi",
+    "photos": [
+      {
+        "file": "masjid-jamek-sultan-tinggi-1",
+        "width": 500,
+        "height": 411,
+        "stage": "after"
+      },
+      {
+        "file": "masjid-jamek-sultan-tinggi-2",
+        "width": 525,
+        "height": 496,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Masjid Jamiatus Solehah Dengkil",
     "group": "Masjid",
-    "photo": "project-masjid-jamiatus-solehah-dengkil"
+    "photo": "project-masjid-jamiatus-solehah-dengkil",
+    "photos": [
+      {
+        "file": "masjid-jamiatus-solehah-dengkil-1",
+        "width": 500,
+        "height": 421,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Masjid Saidina Hamzah Kl",
     "group": "Masjid",
-    "photo": "project-masjid-saidina-hamzah-kl"
+    "photo": "project-masjid-saidina-hamzah-kl",
+    "photos": [
+      {
+        "file": "masjid-saidina-hamzah-kl-1",
+        "width": 500,
+        "height": 412,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Masjid Tengku Ampuan Rahimah Klang",
     "group": "Masjid",
-    "photo": "project-masjid-tengku-ampuan-rahimah-klang"
+    "photo": "project-masjid-tengku-ampuan-rahimah-klang",
+    "photos": [
+      {
+        "file": "masjid-tengku-ampuan-rahimah-klang-1",
+        "width": 500,
+        "height": 338,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Masjid Bandar Diraja Klang",
     "group": "Masjid",
-    "photo": "project-masjid-bandar-diraja-klang"
+    "photo": "project-masjid-bandar-diraja-klang",
+    "photos": [
+      {
+        "file": "masjid-bandar-diraja-klang-1",
+        "width": 500,
+        "height": 469,
+        "stage": "after"
+      },
+      {
+        "file": "masjid-bandar-diraja-klang-2",
+        "width": 800,
+        "height": 800,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Surau Al Mashyur Klang",
     "group": "Surau",
-    "photo": "project-surau-al-mashyur-klang"
+    "photo": "project-surau-al-mashyur-klang",
+    "photos": [
+      {
+        "file": "surau-al-mashyur-klang-1",
+        "width": 600,
+        "height": 502,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Surau An Nur Lp8 Seri Kembangan",
     "group": "Surau",
-    "photo": "project-surau-an-nur-lp8-seri-kembangan"
+    "photo": "project-surau-an-nur-lp8-seri-kembangan",
+    "photos": [
+      {
+        "file": "surau-an-nur-lp8-seri-kembangan-1",
+        "width": 500,
+        "height": 445,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Surau An Nur Taman Mastiara Kuala Lumpur",
     "group": "Surau",
-    "photo": "project-surau-an-nur-taman-mastiara-kuala-lumpur"
+    "photo": "project-surau-an-nur-taman-mastiara-kuala-lumpur",
+    "photos": [
+      {
+        "file": "surau-an-nur-taman-mastiara-kuala-lumpur-1",
+        "width": 600,
+        "height": 493,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Surau As Salam Setia Damai Setia Alam",
     "group": "Surau",
-    "photo": "project-surau-as-salam-setia-damai-setia-alam"
+    "photo": "project-surau-as-salam-setia-damai-setia-alam",
+    "photos": [
+      {
+        "file": "surau-as-salam-setia-damai-setia-alam-1",
+        "width": 600,
+        "height": 506,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Surau Paid Sepang",
     "group": "Surau",
-    "photo": "project-surau-paid-sepang"
+    "photo": "project-surau-paid-sepang",
+    "photos": [
+      {
+        "file": "surau-paid-sepang-1",
+        "width": 500,
+        "height": 483,
+        "stage": "after"
+      }
+    ]
   },
   {
     "name": "Masjid Ar Ridhuan Hulu Klang",
     "group": "Masjid",
-    "photo": "project-masjid-ar-ridhuan-hulu-klang"
+    "photo": "project-masjid-ar-ridhuan-hulu-klang",
+    "photos": [
+      {
+        "file": "masjid-ar-ridhuan-hulu-klang-1",
+        "width": 500,
+        "height": 438,
+        "stage": "after"
+      },
+      {
+        "file": "masjid-ar-ridhuan-hulu-klang-2",
+        "width": 800,
+        "height": 800,
+        "stage": "after"
+      }
+    ]
   }
 ]

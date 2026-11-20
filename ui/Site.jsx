@@ -1,3 +1,5 @@
+import { articles, articlesByPath, articlePath } from "../lib/articles";
+import stylesArticle from "../styles/article.module.css";
 import restoredHeroes from "../data/restored-heroes.json";
 import cataloguePhotos from "../data/catalogue-photos.json";
 import { createContext, useContext, useState, useEffect, useRef } from "react";
@@ -13,8 +15,6 @@ import {
   X,
   ChevronDown,
   ShoppingBag,
-  Camera,
-  Music2,
   Download,
 } from "lucide-react";
 import {
@@ -94,21 +94,27 @@ function Btn({ to, href, children, green = false }) {
     </Go>
   );
 }
+// Brand glyphs from Font Awesome Free 6.7.2 (CC BY 4.0), https://fontawesome.com/license/free
 function Social() {
   return (
     <span className="social">
       <a aria-label="Facebook" href="https://www.facebook.com/officecarpetKA">
-        <strong aria-hidden="true">f</strong>
+        <svg aria-hidden="true" viewBox="0 0 320 512" fill="currentColor"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" /></svg>
       </a>
       <a aria-label="Instagram" href="https://www.instagram.com/koleksiadam/">
-        <Camera />
+        <svg aria-hidden="true" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" /></svg>
       </a>
       <a aria-label="TikTok" href="https://www.tiktok.com/@koleksiadam">
-        <Music2 />
+        <svg aria-hidden="true" viewBox="0 0 448 512" fill="currentColor"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" /></svg>
       </a>
     </span>
   );
 }
+const productMenu = [
+  "collections", "mosque-carpets",
+  ...collectionPaths.filter(path => path !== "mosque-carpets"),
+  "office-carpets", "home-carpets", "flooring", "underlay", "downloads",
+];
 function Header() {
   const { bm, t, page, title } = useSite(),
     [open, set] = useState(false),
@@ -188,30 +194,7 @@ function Header() {
         {(open || products) && (
           <div className="drop">
             <div className="wrap">
-              {(open
-                ? [
-                    "",
-                    "about",
-                    "collections",
-                    ...collectionPaths,
-                    "office-carpets",
-                    "home-carpets",
-                    "flooring",
-                    "underlay",
-                    "downloads",
-                    "blog",
-                    "contact",
-                  ]
-                : [
-                    "collections",
-                    ...collectionPaths,
-                    "office-carpets",
-                    "home-carpets",
-                    "flooring",
-                    "underlay",
-                    "downloads",
-                  ]
-              ).map((p) => (
+              {(open ? ["", "about", ...productMenu, "blog", "contact"] : productMenu).map((p) => (
                 <Go key={p} to={p}>
                   {title(p)}
                 </Go>
@@ -263,7 +246,7 @@ function Group({ children, pale = false }) {
     </section>
   );
 }
-function CategoryCards({ indices = [0, 1, 2, 3, 4, 5] }) {
+function CategoryCards({ indices = [0, 1, 2, 3, 4, 5], examples = {} }) {
   const { bm, t } = useSite();
   return (
     <Cards
@@ -280,7 +263,7 @@ function CategoryCards({ indices = [0, 1, 2, 3, 4, 5] }) {
             ][i]
           : design.collectionItems[i].category,
         desc: bm ? descBM[i] : design.collectionItems[i].description,
-        photo: design.collectionItems[i].image,
+        photo: examples[i] ? familyPhoto(i, examples[i]) : i === 2 ? familyPhoto(i, "Boulevard") : design.collectionItems[i].image,
         to: collectionPaths[i],
         label: t("View collection", "Lihat koleksi"),
       }))}
@@ -438,15 +421,12 @@ function Contact() {
           </span>
         </form>
         <aside className="location">
-          <a className="maplink" href={mapUrl}>
-            <img
-              src={img("klang-map")}
-              alt={t(
-                "Showroom location in Klang. Open Google Maps.",
-                "Lokasi bilik pameran di Klang. Buka Google Maps.",
-              )}
-            />
-          </a>
+          <div className="showroom-map">
+            <iframe title={t("Koleksi Adam showroom map", "Peta bilik pameran Koleksi Adam")}
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1683015020626!2d101.44631121744382!3d3.0495607000000278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc53445dcb38d5%3A0x94711ce22eab7efe!2sKoleksi%20Adam!5e0!3m2!1sen!2sin!4v1642681771060!5m2!1sen!2sin"
+              width="640" height="280" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+            <a href={mapUrl}>{t("Open in Google Maps", "Buka dalam Google Maps")} ↗</a>
+          </div>
           <div className="details">
             {[
               [MapPin, t("Address", "Alamat"), address],
@@ -552,12 +532,12 @@ const mapUrl =
 function FlagStrip() {
   const { t } = useSite();
   return (
-    <div className="anniversary-strip">
-      <p>
-        {t("Proudly serving Malaysia", "Berkhidmat untuk Malaysia")}
-        <br />
-        {t("for the past 15 years", "selama 15 tahun")}
-      </p>
+    <div className="flagstrip">
+      <img src={img("malaysia-banner")} alt="" />
+      {t(
+        "Proudly serving Malaysia for the past 15 years",
+        "Berkhidmat untuk Malaysia selama 15 tahun",
+      )}
     </div>
   );
 }
@@ -705,6 +685,23 @@ function QuotePanel() {
 }
 function Timeline() {
   const { t } = useSite();
+  const timelineRef = useRef(null);
+  useEffect(() => {
+    if (!window.IntersectionObserver || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const list = timelineRef.current;
+    const observer = new IntersectionObserver(entries => {
+      entries.filter(entry => entry.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+        .forEach(({ target }, index) => {
+          target.style.transitionDelay = index * 105 + "ms";
+          target.classList.add("revealed");
+          observer.unobserve(target);
+        });
+    }, { threshold: 0.12 });
+    list.classList.add("reveal-timeline");
+    for (const item of list.children) observer.observe(item);
+    return () => { observer.disconnect(); list.classList.remove("reveal-timeline"); };
+  }, []);
   const milestones = [
     [
       "2011",
@@ -764,7 +761,7 @@ function Timeline() {
     ],
   ];
   return (
-    <ol className="timeline">
+    <ol className="timeline" ref={timelineRef}>
       {milestones.map(([k, m, h, j, p, q]) => (
         <li key={k}>
           <small>{t(k, m)}</small>
@@ -777,72 +774,73 @@ function Timeline() {
 }
 function BlogCards({ indices = [0, 1, 2, 3, 4, 5], compact = false }) {
   const { t } = useSite();
-  const articles = [
-    [
-      "Laminate flooring: good or not?",
-      "Lantai lamina: bagus atau tidak?",
-      "floor",
-      "",
-      "Compare the finish, installation and care before choosing laminate.",
-      "Bandingkan kemasan, pemasangan dan penjagaan lantai lamina.",
-    ],
-    [
-      "10 tips before buying a home carpet",
-      "10 tip sebelum beli karpet rumah",
-      "home",
-      "10-tip-sebelum-beli-karpet-rumah",
-      "Start with the room size, fibre and daily use.",
-      "Mulakan dengan saiz bilik, gentian dan kegunaan harian.",
-    ],
-    [
-      "Choosing an office carpet and installer",
-      "Memilih pembekal dan pemasang karpet pejabat",
-      "office",
-      "pembekal-karpet-office-siap-pasang-pejabat-selesa-dan-cantik",
-      "Plan a comfortable finish for a busy workplace.",
-      "Rancang kemasan yang selesa untuk ruang kerja yang sibuk.",
-    ],
-    [
-      "Signs you need to replace your carpet",
-      "Tanda-tanda anda perlu tukar karpet baru",
-      "replace",
-      "tanda-tanda-anda-perlu-tukar-karpet-baru",
-      "Spot wear in the pile and backing before choosing a replacement.",
-      "Kenali tanda haus pada bulu dan lapisan bawah karpet.",
-    ],
-    [
-      "How to choose a mosque carpet supplier",
-      "Cara memilih pembekal karpet masjid dan surau",
-      "mosque",
-      "cara-memilih-supplier-karpet-masjid-surau-yang-terbaik",
-      "Compare samples, measurements and installation support.",
-      "Bandingkan sampel, ukuran dan perkhidmatan pemasangan.",
-    ],
-    [
-      "A guide to placing carpets at home",
-      "Panduan meletakkan karpet di rumah",
-      "position",
-      "panduan-terbaik-untuk-meletak-karpet-di-rumah",
-      "Use furniture placement to find the right rug position.",
-      "Sesuaikan kedudukan permaidani dengan susunan perabot.",
-    ],
-  ];
   return (
-    <Cards
-      items={indices.map((i) => {
-        const [en, ms, photo, slug, desc, bm] = articles[i];
-        return {
-          name: t(en, ms),
-          photo: "blog-" + photo + ".png",
-          desc: compact ? undefined : t(desc, bm),
-          to: "blog/laminate-flooring",
-          href: slug
-            ? "https://www.adamkarpets.com.my/" + slug + "/"
-            : undefined,
-          label: compact ? undefined : t("Read article", "Baca artikel"),
-        };
-      })}
-    />
+    <Cards items={indices.map(i => {
+      const article = articles[i];
+      return {
+        name: t(...article.title),
+        photo: "blog-" + article.topic + ".png",
+        desc: compact ? undefined : t(...article.summary),
+        to: articlePath(article),
+        label: compact ? undefined : t("Read article", "Baca artikel"),
+      };
+    })} />
+  );
+}
+
+function JournalArticle({ article }) {
+  const { t, title } = useSite();
+  const [year, month, day] = article.date.split("-");
+  const related = [
+    [1, 5, 2], [5, 3, 0], [3, 4, 1],
+    [1, 2, 5], [2, 3, 1], [1, 0, 3],
+  ][articles.indexOf(article)];
+  const target = (i) => article.slug + "-" + (i + 1);
+  return (
+    <>
+      <article className={stylesArticle.story}>
+        <header className={stylesArticle.header}>
+          <div className={"wrap " + stylesArticle.headerGrid}>
+            <div>
+              <Go to="blog" className={stylesArticle.back}>← {t("All articles", "Semua artikel")}</Go>
+              <h1>{t(...article.title)}</h1>
+              <p className={stylesArticle.deck}>{t(...article.intro)}</p>
+              <p className={stylesArticle.byline}>Koleksi Adam <span>·</span> <time dateTime={article.date}>{day}.{month}.{year}</time></p>
+            </div>
+            <img src={img("blog-" + article.topic + ".png")} alt={t(...article.title)} width="700" height="540" fetchPriority="high" />
+          </div>
+        </header>
+        <div className={"wrap " + stylesArticle.bodyGrid}>
+          <aside>
+            <nav className={stylesArticle.contents} aria-label={t("In this article", "Dalam artikel ini")}>
+              <h2>{t("In this article", "Dalam artikel ini")}</h2>
+              <ol>{article.sections.map(([en, ms], i) => (
+                <li key={en}><a href={"#" + target(i)}>{t(en, ms)}</a></li>
+              ))}</ol>
+            </nav>
+          </aside>
+          <div className={stylesArticle.copy}>
+            {article.sections.map(([en, ms, text, terjemahan], i) => (
+              <section key={en} id={target(i)}>
+                <h2>{article.topic === "home" && (i + 1) + ". "}{t(en, ms)}</h2>
+                <p>{t(text, terjemahan)}</p>
+                {i === 0 && (
+                  <figure>
+                    <img src={img(article.illustration)} width="720" height="360" loading="lazy" alt={t(...article.caption)} />
+                    <figcaption>{t(...article.caption)}</figcaption>
+                  </figure>
+                )}
+              </section>
+            ))}
+            <Btn to={article.service}>{title(article.service)}</Btn>
+          </div>
+        </div>
+      </article>
+      <Group pale>
+        <h2>{t("Related articles", "Artikel berkaitan")}</h2>
+        <BlogCards indices={related} />
+      </Group>
+    </>
   );
 }
 function HomeSlider() {
@@ -1031,7 +1029,7 @@ function Services() {
     "office-carpets",
   ];
   const photos = [
-    ["freeway.png", "home-installation"],
+    ["freeway-living-room", "patterned-carpet-room"],
     ["mosque-dengkil", "mosque-klang"],
     ["floor-home.png", "floor-school.png"],
     ["office-open-plan", "office-meeting-room"],
@@ -1058,13 +1056,13 @@ function Services() {
       <div className="gallery">
         {photos[selected].map((p, k) => (
           <Go to={routes[selected]} key={p}>
-            {selected === 3 ? (
+            {selected === 3 || selected === 0 ? (
               <img
                 src={"/images/" + p + "-1200.webp"}
-                srcSet={[600, 1200, 1600].map(w => "/images/" + p + "-" + w + ".webp " + w + "w").join(", ")}
+                srcSet={(selected === 3 ? [600, 1200, 1600] : [600, 1200]).map(w => "/images/" + p + "-" + w + ".webp " + w + "w").join(", ")}
                 sizes="(min-width: 1900px) 780px, 44vw"
                 width="1200" height="1200" loading="lazy" decoding="async"
-                alt={k === 0 ? t("Carpet tiles throughout an open-plan office", "Jubin karpet di pejabat pelan terbuka") : t("Textured carpet tiles in a meeting room", "Jubin karpet bertekstur di bilik mesyuarat")}
+                alt={selected === 0 ? (k === 0 ? t("Green striped carpet in a living room", "Karpet berjalur hijau di ruang tamu") : t("Patterned carpet in a sunlit interior", "Karpet bercorak di ruang yang cerah")) : k === 0 ? t("Carpet tiles throughout an open-plan office", "Jubin karpet di pejabat pelan terbuka") : t("Textured carpet tiles in a meeting room", "Jubin karpet bertekstur di bilik mesyuarat")}
               />
             ) : (
               <img src={img(p)} alt={title(routes[selected]) + " · " + (k + 1)} />
@@ -1216,6 +1214,51 @@ function Chips({ options, value, onChange, label }) {
     </div>
   );
 }
+function familyPhoto(category, name) {
+  const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  return "families/" + categories[category] + "-" + slug + ".webp";
+}
+
+function FamilyGrid({ category, rows }) {
+  const { t, bm } = useSite();
+  return (
+    <div className="family-grid">
+      {rows.map((family) => {
+        const { name, page, tags, designs } = family;
+        const details = [
+          ["Size", "Saiz", tags.Size],
+          ["Roll width", "Lebar gulungan", tags["Roll width"]],
+          ["Material", "Bahan", tags.Material],
+          ["Texture", "Tekstur", tags.Texture],
+        ].filter(([, , values]) => values?.length).slice(0, 2);
+        const translate = (value) => bm ? facetBM[value] || value : value;
+        const colours = (tags.Colour || []).slice(0, 4).map(translate);
+        return (
+          <article className="family-card" key={name}>
+            <a href={pdf(category, page)}>
+              <img src={img(familyPhoto(category, name))} width="640" height="416"
+                loading="lazy" decoding="async" alt={name} />
+              <div className="family-copy">
+                <h3>{name}</h3>
+                {designs && <p>{t("Designs", "Rekaan")} · {designs}</p>}
+                {colours.length > 0 && <p>{t("Catalogue colours include ", "Antara warna katalog ialah ")}{colours.join(", ")}.</p>}
+                {details.length > 0 && (
+                  <dl>
+                    {details.map(([en, ms, values]) => (
+                      <div key={en}><dt>{t(en, ms)}</dt><dd>{values.map(translate).join(" / ")}</dd></div>
+                    ))}
+                  </dl>
+                )}
+                <b>{t("View catalogue", "Lihat katalog")} · {t("p.", "hlm.")} {page} →</b>
+              </div>
+            </a>
+          </article>
+        );
+      })}
+    </div>
+  );
+}
+
 function Category({ i, families }) {
   const { t, bm } = useSite();
   const [facet, choose] = useState(0),
@@ -1251,16 +1294,6 @@ function Category({ i, families }) {
   const terms = (f) =>
     field === "Collection" ? [f.name] : f.tags[field] || [];
   const options = [...new Set(families.flatMap(terms))].sort();
-  const directory = (rows) => (
-    <div className="directory">
-      {rows.map((f) => (
-        <a key={f.name} href={pdf(i, f.page)}>
-          {f.name}
-          <small>PDF · {f.page}</small>
-        </a>
-      ))}
-    </div>
-  );
   const matching = facet
     ? families.filter((f) =>
         direct
@@ -1376,12 +1409,14 @@ function Category({ i, families }) {
             catBM[5],
           ][i]
         : e.category,
-      photo: e.image,
-      desc: bm ? ms[k] : e.description,
+      photo: i === 0 && e.title === "Tokyo" ? familyPhoto(i, "Tokyo") : e.image,
+      desc: e.title === "Tokyo"
+        ? t("100% BCF Duralox Olefin. Shown in Green (267).", "Olefin BCF Duralox 100%. Warna Green (267) ditunjukkan.")
+        : bm ? ms[k] : e.description,
       to,
       href: to
         ? undefined
-        : pdf(i, { "Zafira-S": 11, "Sevora-S": 12 }[e.title] || family?.page),
+        : pdf(i, { Tokyo: 29, "Zafira-S": 11, "Sevora-S": 12 }[e.title] || family?.page),
       label: to
         ? t("View collection", "Lihat koleksi")
         : t("View in catalogue", "Lihat dalam katalog"),
@@ -1418,7 +1453,7 @@ function Category({ i, families }) {
             </select>
           </label>
         )}
-        {directory(matching)}
+        <FamilyGrid category={i} rows={matching} />
         {!matching.length && (
           <p>
             {t("No matching catalogue entries.", "Tiada koleksi yang sepadan.")}
@@ -1426,6 +1461,35 @@ function Category({ i, families }) {
         )}
       </div>
     );
+  const searchResults = families.filter(f => f.name.toLowerCase().includes(search.trim().toLowerCase()));
+  const collectionDirectory = (
+    <div className={mosque ? "project-directory dirwrap" : "wrap dirwrap"}>
+        <details>
+          <summary>
+            {t("Collection directory", "Direktori koleksi")} ({families.length})
+          </summary>
+          <input
+            className="search"
+            aria-label={t("Search collections", "Cari koleksi")}
+            placeholder={t(
+              "Search by collection name",
+              "Cari mengikut nama koleksi",
+            )}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <FamilyGrid category={i} rows={searchResults} />
+          {!searchResults.length && (
+            <p>
+              {t(
+                "No collections match your search.",
+                "Tiada koleksi yang sepadan.",
+              )}
+            </p>
+          )}
+        </details>
+      </div>
+  );
   return (
     <>
       <Hero
@@ -1486,41 +1550,10 @@ function Category({ i, families }) {
       {mosque && (
         <>
           <FlagStrip />
-          <MosqueProjects />
+          <MosqueProjects>{collectionDirectory}</MosqueProjects>
         </>
       )}
-      <div className="wrap dirwrap">
-        <details>
-          <summary>
-            {t("Collection directory", "Direktori koleksi")} ({families.length})
-          </summary>
-          <input
-            className="search"
-            aria-label={t("Search collections", "Cari koleksi")}
-            placeholder={t(
-              "Search by collection name",
-              "Cari mengikut nama koleksi",
-            )}
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          {directory(
-            families.filter((f) =>
-              f.name.toLowerCase().includes(search.trim().toLowerCase()),
-            ),
-          )}
-          {!families.some((f) =>
-            f.name.toLowerCase().includes(search.trim().toLowerCase()),
-          ) && (
-            <p>
-              {t(
-                "No collections match your search.",
-                "Tiada koleksi yang sepadan.",
-              )}
-            </p>
-          )}
-        </details>
-      </div>
+      {!mosque && collectionDirectory}
       {!mosque && <Cta />}
     </>
   );
@@ -1676,6 +1709,11 @@ function Product({ i }) {
           )}
         </p>
         <CategoryCards
+          examples={[
+            { 3: "Royal Dolce", 2: "Regal Waves", 0: "Crystal Cubes" },
+            { 1: "Orion-S", 0: "Panama", 2: "Windsor 2" },
+            { 4: "Zareena Mosque", 5: "Jazeera Mosque", 0: "Tobago" },
+          ][i]}
           indices={
             [
               [3, 2, 0],
@@ -1759,118 +1797,7 @@ function More({ page }) {
         </Group>
       </>
     );
-  if (page === "blog/laminate-flooring")
-    return (
-      <>
-        <Hero title={title(page)} photo="blog-floor.png" />
-        <Group>
-          <article>
-            <Go to="blog">Blog</Go>
-            <p>27.05.2024 · Koleksi Adam</p>
-            <p className="intro">
-              {t(
-                "Laminate brings a wood finish to living spaces. The right choice depends on how you use the room and how often the floor gets wet.",
-                "Lantai lamina memberi kemasan kayu kepada ruang dalaman. Pilih mengikut kegunaan bilik dan tahap kelembapannya.",
-              )}
-            </p>
-            {[
-              [
-                t("What is laminate flooring?", "Apakah lantai lamina?"),
-                t(
-                  "Laminate planks have a decorative surface and a protective wear layer over a wood-based core. Compare samples under the lighting in your room.",
-                  "Papan lamina mempunyai permukaan hiasan dan lapisan pelindung di atas teras berasaskan kayu. Bandingkan sampel di bawah pencahayaan bilik anda.",
-                ),
-              ],
-              [
-                t("Installation and care", "Pemasangan dan penjagaan"),
-                t(
-                  "Click joints connect the planks. Ask the installer to inspect the existing floor and check the clearance under doors. Sweep or vacuum regularly and wipe spills promptly.",
-                  "Sambungan klik mencantumkan papan. Minta pemasang menyemak aras lantai dan ruang di bawah pintu. Sapu atau vakum secara berkala dan lap tumpahan dengan segera.",
-                ),
-              ],
-              [
-                t("Where does it work best?", "Di manakah ia sesuai?"),
-                t(
-                  "Consider laminate for dry living rooms, bedrooms and offices. For bathrooms or other wet spaces, discuss moisture exposure and suitable alternatives before ordering.",
-                  "Pertimbangkan lamina untuk ruang tamu, bilik tidur dan pejabat yang kering. Bagi bilik mandi atau ruang basah, bincangkan pendedahan kepada air dan pilihan lain sebelum membuat pesanan.",
-                ),
-              ],
-            ].map(([h, p]) => (
-              <div key={h}>
-                <h2>{h}</h2>
-                <p>{p}</p>
-              </div>
-            ))}
-            <h2>
-              {t("Advantages of laminate flooring", "Kelebihan lantai lamina")}
-            </h2>
-            {[
-              [
-                "Click-fit installation",
-                "Pemasangan klik",
-                "Interlocking boards can be laid over a suitable level floor. Skirting finishes the edges.",
-                "Papan boleh dicantumkan di atas lantai rata yang sesuai. Skirting mengemaskan bahagian tepi.",
-              ],
-              [
-                "Cleaning",
-                "Pembersihan",
-                "Sweep away grit and use a lightly damp cloth for marks.",
-                "Sapu pasir halus dan gunakan kain sedikit lembap untuk membersihkan kesan kotoran.",
-              ],
-              [
-                "Durability",
-                "Ketahanan",
-                "The wear layer protects the wood-look print. Check the rating for the expected foot traffic.",
-                "Lapisan pelindung menjaga corak kayu. Semak penarafan mengikut penggunaan ruang.",
-              ],
-              [
-                "Price",
-                "Harga",
-                "Compare an installed quote that includes underlay, trims and floor preparation.",
-                "Bandingkan sebut harga yang merangkumi alas, kemasan tepi dan penyediaan lantai.",
-              ],
-              [
-                "Pattern",
-                "Corak",
-                "Place samples next to your furniture and look at them in daylight and evening light.",
-                "Letakkan sampel di sisi perabot dan lihat warnanya pada waktu siang dan malam.",
-              ],
-            ].map(([h, m, p, q]) => (
-              <section key={h}>
-                <h3>{t(h, m)}</h3>
-                <p>{t(p, q)}</p>
-              </section>
-            ))}
-            <h2>
-              {t("Guide to choosing laminate", "Panduan memilih lantai lamina")}
-            </h2>
-            <p>
-              {t(
-                "Check board thickness against door clearance, compare the grain at room scale and ask about the product’s moisture limits. The original guide discusses boards between 8 and 12 mm thick.",
-                "Semak ketebalan papan dan ruang di bawah pintu, bandingkan corak mengikut saiz bilik dan semak had kelembapan produk. Panduan asal membincangkan papan setebal 8 hingga 12 mm.",
-              )}
-            </p>
-            <h2>
-              {t(
-                "Floor installation by Koleksi Adam",
-                "Pemasangan lantai oleh Koleksi Adam",
-              )}
-            </h2>
-            <p>
-              {t(
-                "Our team installs flooring for homes, schools and offices. Share your room measurements and location to discuss the finish and installation.",
-                "Kami memasang lantai di kediaman, sekolah dan pejabat. Kongsi ukuran dan lokasi untuk membincangkan kemasan serta pemasangan.",
-              )}
-            </p>
-            <Btn to="flooring">{title("flooring")}</Btn>
-          </article>
-        </Group>
-        <Group pale>
-          <h2>{t("Related posts", "Artikel berkaitan")}</h2>
-          <BlogCards indices={[1, 2, 5]} />
-        </Group>
-      </>
-    );
+  if (articlesByPath[page]) return <JournalArticle article={articlesByPath[page]} />;
   if (page === "about")
     return (
       <>
@@ -1963,7 +1890,49 @@ function More({ page }) {
     );
   return <Application page={page} />;
 }
-function MosqueProjects() {
+function InstallationAlbum({ project }) {
+  const { t } = useSite();
+  const [index, setIndex] = useState(0);
+  const { photos } = project;
+  const name = project.fullName || project.name;
+  const current = photos[index];
+  const stage = (photo) => photo.stage === "before"
+    ? t("Before installation", "Sebelum pemasangan")
+    : t("Installed carpet", "Selepas pemasangan");
+  return (
+    <figure className="installation-album">
+      <img
+        src={`/images/mosque-albums/${current.file}.webp`}
+        alt={`${name} — ${stage(current)}`}
+        width={current.width}
+        height={current.height}
+        loading="lazy"
+        decoding="async"
+      />
+      <figcaption aria-live="polite">
+        <strong>{name}</strong>
+        <span>{stage(current)} · {index + 1} / {photos.length}</span>
+      </figcaption>
+      {photos.length > 1 && (
+        <div className="projectthumbs" role="group" aria-label={name}>
+          {photos.map((photo, n) => (
+            <button
+              type="button"
+              key={photo.file}
+              aria-label={`${name} — ${stage(photo)} (${n + 1}/${photos.length})`}
+              aria-pressed={index === n}
+              onClick={() => setIndex(n)}
+            >
+              <img src={`/images/mosque-albums/${photo.file}-thumb.webp`} alt="" loading="lazy" />
+            </button>
+          ))}
+        </div>
+      )}
+    </figure>
+  );
+}
+
+function MosqueProjects({ children }) {
   const { t } = useSite();
   const [group, chooseGroup] = useState("Masjid");
   const [prefix, chooseLetter] = useState("");
@@ -2034,23 +2003,9 @@ function MosqueProjects() {
             </button>
           ))}
         </div>
-        <figure>
-          <img src={img(selected.photo)} alt={selected.name} />
-          <figcaption>{selected.name}</figcaption>
-          <div className="projectthumbs">
-            {filtered.slice(0, 7).map((p) => (
-              <button
-                key={p.name}
-                aria-label={p.name}
-                aria-pressed={p.name === selected.name}
-                onClick={() => chooseProject(p.name)}
-              >
-                <img src={img(p.photo)} alt="" />
-              </button>
-            ))}
-          </div>
-        </figure>
+        {selected && <InstallationAlbum key={selected.name} project={selected} />}
       </div>
+      {children}
     </Group>
   );
 }
@@ -2111,10 +2066,17 @@ function ProjectGallery() {
 function Application({ page }) {
   const { t, title } = useSite(),
     [officeFilter, setOffice] = useState(-1),
-    [rug, setRug] = useState(0);
+    [rug, setRug] = useState(0),
+    [design, setDesign] = useState(7);
   const office = page === "office-carpets",
     floor = page === "flooring";
   const rugs = ["Tehran Classic", "Greek Olympia", "Moderno"];
+  const swatches = [
+    [1, 7, 12, 11, 10, 8, 4, 3, 2, 5, 6, 9],
+    [2, 3, 4, 11, 16, 13, 12, 18, 9],
+    [7, 8, 9, 10, 1, 2, 3, 5, 6, 4],
+  ];
+  const rugFile = ["tehran", "greek", "moderno"][rug];
   return (
     <>
       <Hero
@@ -2277,14 +2239,14 @@ function Application({ page }) {
           <div className="center">
             <h2>
               {t(
-                "Design Karpet Office Popular",
-                "Reka Bentuk Karpet Pejabat Popular",
+                "Rugs for your home",
+                "Permaidani untuk kediaman",
               )}
             </h2>
             <p>
               {t(
-                "Here are some carpet designs commonly used by offices and buildings in Malaysia.",
-                "Berikut ialah reka bentuk karpet yang biasa digunakan di pejabat dan bangunan di Malaysia.",
+                "Choose a collection and select a rug to see how its pattern looks in the room.",
+                "Pilih koleksi dan reka bentuk permaidani untuk melihat coraknya di dalam ruang tamu.",
               )}
             </p>
           </div>
@@ -2292,13 +2254,26 @@ function Application({ page }) {
             options={rugs}
             label={t("Rug collection", "Koleksi permaidani")}
             value={rug}
-            onChange={setRug}
+            onChange={(next) => {
+              setRug(next);
+              setDesign(swatches[next][0]);
+            }}
           />
           <div className="servicepair rug">
-            <img
-              src={img(["tehran.png", "greek.png", "moderno.png"][rug])}
-              alt={rugs[rug]}
-            />
+            <figure className="rugroom" aria-label={rugs[rug]}>
+              <img
+                src={img("tehran.png")}
+                alt={t("Living room preview", "Pratonton ruang tamu")}
+                width="1080" height="1080" loading="lazy"
+              />
+              <img
+                  className="ruglayer"
+                  src={`/images/rug-variants/${rugFile}-${design}.webp`}
+                  alt={`${rugs[rug]} ${design}`}
+                  width="1080" height="1080"
+                  loading="lazy"
+                />
+            </figure>
             <div>
               <h3>{rugs[rug]}</h3>
               <p>
@@ -2319,16 +2294,25 @@ function Application({ page }) {
                   ][rug]
                 }
               </p>
-              {rug === 0 && (
-                <img
-                  className="rugchart"
-                  src={img("tehran-catalogue")}
-                  alt={t(
-                    "Nine Tehran Classic rug designs",
-                    "Sembilan reka bentuk Tehran Classic",
-                  )}
-                />
-              )}
+              <fieldset className="rugvariants">
+                  <legend>
+                    {t("Preview a design", "Pratonton reka bentuk")} · {rugs[rug]} {design}
+                  </legend>
+                  <div>
+                    {swatches[rug].map((n) => (
+                      <button
+                        key={n} type="button" aria-pressed={n === design}
+                        aria-label={`${rugs[rug]} ${n}`} onClick={() => setDesign(n)}
+                      >
+                        <img
+                          src={`/images/rug-variants/${rugFile}-${n}-swatch.webp`}
+                          alt="" width="220" height="150" loading="lazy"
+                        />
+                        <span>{String(n).padStart(2, "0")}</span>
+                      </button>
+                    ))}
+                  </div>
+              </fieldset>
               <p>
                 {rug === 2
                   ? t(

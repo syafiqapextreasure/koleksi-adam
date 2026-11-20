@@ -1,0 +1,30 @@
+.story { color: var(--navy, #203456); }
+.header { background: #eef5fc; padding-block: clamp(2rem, 4.3vw, 4.5rem); }
+.headerGrid, .bodyGrid { display: grid; align-items: center; gap: clamp(1.75rem, 4.5vw, 5rem); }
+.headerGrid { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+.headerGrid h1 { font-size: clamp(2.15rem, 4vw, 5.1rem); line-height: 1.08; letter-spacing: -.05em; margin: clamp(1rem, 2vw, 2rem) 0 1rem; }
+.headerGrid > img { display: block; width: 100%; height: auto; aspect-ratio: 1.35; object-fit: cover; border-radius: .5rem; }
+.back { font-weight: 650; text-decoration: underline; text-underline-offset: .25em; }
+.deck { max-width: 48ch; font-size: clamp(1.08rem, 1.5vw, 1.5rem); line-height: 1.58; }
+.byline { margin: 1.4rem 0 0; font-size: .9rem; font-weight: 650; }
+.byline span { margin-inline: .35rem; }
+.bodyGrid { grid-template-columns: minmax(12rem, .75fr) minmax(0, 2fr); align-items: start; padding-block: clamp(2rem, 5vw, 5rem); }
+.contents { border-top: .2rem solid currentColor; padding-block: .85rem; }
+.contents h2 { font-size: 1.18rem; margin: 0 0 .65rem; }
+.contents ol { padding-inline-start: 1.5em; margin: 0; }
+.contents li { padding: .45em 0 .45em .2em; border-bottom: 1px solid #dbe4ef; }
+.contents a { text-decoration: none; }
+.contents a:hover, .contents a:focus-visible { text-decoration: underline; }
+.copy { max-width: 48rem; }
+.copy section { scroll-margin-top: 6rem; border-bottom: 1px solid #dbe4ef; padding-bottom: clamp(1.15rem, 2.3vw, 2rem); margin-bottom: clamp(1.15rem, 2.3vw, 2rem); }
+.copy section h2 { margin: 0 0 .5rem; font-size: clamp(1.35rem, 2vw, 2.1rem); line-height: 1.2; }
+.copy section p { margin: 0; line-height: 1.78; }
+.copy figure { margin: 1.3rem 0 0; }
+.copy figure img { width: 100%; height: auto; aspect-ratio: 2.1; object-fit: cover; display: block; border-radius: .45rem; }
+.copy figcaption { font-size: .85em; line-height: 1.55; margin-top: .5rem; }
+.copy :global(.btn) { margin: 0; }
+@media (max-width: 740px) {
+  .headerGrid, .bodyGrid { grid-template-columns: minmax(0, 1fr); }
+  .headerGrid > img { aspect-ratio: 1.8; }
+  .bodyGrid { gap: 1.5rem; }
+}

@@ -52,3 +52,12 @@
   .expertise .gallery img { min-width: 0; }
 }
 
+
+.showroom-map iframe { display: block; width: 100%; height: clamp(180px, 17vw, 350px); border: 0; border-radius: 6px; }
+.showroom-map a { display: inline-block; color: white; margin-top: .5rem; font-size: .9em; text-decoration: underline; }
+.social svg { width: 18px; height: 18px; }
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-timeline li { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+  .reveal-timeline li.revealed { opacity: 1; transform: translateY(0); }
+}
+@media print { .reveal-timeline li { opacity: 1; transform: none; } }

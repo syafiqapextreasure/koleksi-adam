@@ -9,7 +9,7 @@ Bilingual Next.js catalogue and installation website for Koleksi Adam in Klang. 
 3. Deploy the branch. Wrangler automatically provisions the **ENQUIRIES** KV namespace on the first deployment. Check **Settings → Bindings** for the connected namespace. Subsequent deployments should use this same namespace.
 4. Open the assigned `workers.dev` address. Check both languages, download a catalogue, and send a test enquiry. In **Storage & databases → Workers KV**, open the bound namespace to find the submission by its UTC timestamp. To serve the public site, connect the business domain under **Settings → Domains & Routes** after acceptance.
 
-The site includes a blog listing and one local detail page. Five other article cards link to the existing WordPress articles on the public domain. During a domain cutover, keep those article paths on their current origin, for example through explicit Worker route exclusions on the proxied WordPress origin. A Worker custom domain covering every path needs equivalent legacy-origin routing or migrated articles before cutover.
+The bilingual blog listing opens six locally hosted articles. Legacy WordPress article URLs redirect to their Bahasa Malaysia detail pages.
 
 The build prerenders the English and Bahasa Malaysia pages, sitemap and robots file using Next.js. The staging script includes page HTML, Next.js navigation data, fonts, JavaScript, images and the six optimized catalogue PDFs. Cloudflare serves these from Workers Static Assets. The Worker validates enquiries and writes them to private KV before returning success. Form submissions appear in KV. Email notifications require a separate integration. WhatsApp and Shopee links open the existing business channels.
 

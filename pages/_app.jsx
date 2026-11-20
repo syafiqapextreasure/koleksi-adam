@@ -5,6 +5,7 @@ import "../styles/site.css";
 import "../styles/reference.css";
 import "../styles/carousels.css";
 import "../styles/responsive.css";
+import "../styles/installation-rugs.css";
 
 export default function App({ Component, pageProps }) {
   const { events } = useRouter();

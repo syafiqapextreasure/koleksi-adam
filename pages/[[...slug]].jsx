@@ -1,3 +1,4 @@
+import { articlesByPath } from "../lib/articles";
 import Head from "next/head";
 import Site from "../ui/Site";
 import { routes, categories, collectionPaths } from "../lib/content";
@@ -22,13 +23,14 @@ export function getStaticProps({ params }) {
   const category = categories[collectionPaths.indexOf(page)];
   const families = register
     .filter((r) => r.source_key === category)
-    .map((r) => ({ name: r.collection, page: Number(r.source_page_start), tags: filters[category]?.[r.collection] || {} }));
+    .map((r) => ({ name: r.collection, designs: (r.designs || "").split(";").map(s => s.trim()).filter(s => s && !["SQ", "Plain", "Plank"].includes(s)).join(", "), page: Number(r.source_page_start), tags: filters[category]?.[r.collection] || {} }));
   return { props: { bm, page, families } };
 }
 export default function Route(props) {
   const { bm, page } = props;
   const { title, summary, image } = pageSeo(page, bm);
   const canonical = pageUrl(page, bm);
+  const article = articlesByPath[page];
   const entity = origin + "/#business";
   const business = {
     "@type": "Store", "@id": entity, name: "Koleksi Adam", url: origin,
@@ -38,10 +40,10 @@ export default function Route(props) {
   };
   const graph = [
     business,
-    { "@type": page === "blog/laminate-flooring" ? "Article" : page === "contact" ? "ContactPage" : "WebPage",
+    { "@type": article ? "Article" : page === "contact" ? "ContactPage" : "WebPage",
       "@id": canonical + "#page", url: canonical, name: title, description: summary,
       inLanguage: bm ? "ms-MY" : "en-MY", publisher: { "@id": entity }, image,
-      ...(page === "blog/laminate-flooring" ? { headline: title.split(" | ")[0], author: { "@id": entity }, mainEntityOfPage: canonical } : {}) },
+      ...(article ? { headline: article.title[Number(bm)], datePublished: article.date, author: { "@id": entity }, mainEntityOfPage: canonical } : {}) },
   ];
   return (
     <>
@@ -55,7 +57,7 @@ export default function Route(props) {
         <meta property="og:site_name" content="Koleksi Adam" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={summary} />
-        <meta property="og:type" content={page === "blog/laminate-flooring" ? "article" : "website"} />
+        <meta property="og:type" content={article ? "article" : "website"} />
         <meta property="og:url" content={canonical} />
         <meta property="og:locale" content={bm ? "ms_MY" : "en_MY"} />
         <meta property="og:locale:alternate" content={bm ? "en_MY" : "ms_MY"} />
