@@ -5,7 +5,7 @@ Bilingual Next.js catalogue and installation website for Koleksi Adam in Klang. 
 ## Install on Cloudflare Workers
 
 1. In **Workers & Pages**, create a **Worker**, choose **Import a repository** and select the GitHub repository. Use the directory containing this README as the root directory.
-2. Name the Worker **koleksi-adam** to match `wrangler.jsonc`. Set **Build command** to `npm run build:worker` and **Deploy command** to `npm run deploy:worker`. Use Node.js 22.13 or later.
+2. Name the Worker **koleksi-adam** to match `wrangler.jsonc`. Set **Build command** to `npm run build` and **Deploy command** to `npx wrangler deploy`. The build automatically creates `.worker-assets` for Wrangler. Use Node.js 22.13 or later.
 3. Deploy the branch. Wrangler automatically provisions the **ENQUIRIES** KV namespace on the first deployment. Check **Settings → Bindings** for the connected namespace. Subsequent deployments should use this same namespace.
 4. Open the assigned `workers.dev` address. Check both languages, download a catalogue, and send a test enquiry. In **Storage & databases → Workers KV**, open the bound namespace to find the submission by its UTC timestamp. To serve the public site, connect the business domain under **Settings → Domains & Routes** after acceptance.
 

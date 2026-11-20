@@ -8,7 +8,8 @@
     "start": "next start",
     "prebuild": "node scripts/prepare-catalogues.mjs",
     "predev": "node scripts/prepare-catalogues.mjs",
-    "build:worker": "npm run build && node scripts/stage-worker.mjs",
+    "postbuild": "node scripts/stage-worker.mjs",
+    "build:worker": "npm run build",
     "preview:worker": "npx --yes wrangler@4.165.0 dev",
     "deploy:worker": "npx --yes wrangler@4.165.0 deploy"
   },
