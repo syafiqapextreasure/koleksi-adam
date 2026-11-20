@@ -141,7 +141,7 @@ function Header() {
       <div className="top">
         <div className="wrap">
           <span>
-            <img className="navflag" src={img("malaysia-banner")} alt="" />
+            <img className="navflag" src="/images/malaysia-flag.svg" width="24" height="12" alt="" />
             {t(
               "Proudly serving Malaysia since 2011",
               "Berkhidmat di Malaysia sejak 2011",
@@ -176,7 +176,7 @@ function Header() {
             <Go to="blog">Blog</Go>
           </div>
           <Go className="brand">
-            <img src={img("nav-logo")} alt="Koleksi Adam" />
+            <img src="/images/koleksi-adam.svg" width="231" height="29" alt="Koleksi Adam" />
           </Go>
           <div className="navlinks">
             <Go to="contact">{title("contact")}</Go>
@@ -533,11 +533,11 @@ function FlagStrip() {
   const { t } = useSite();
   return (
     <div className="flagstrip">
-      <img src={img("malaysia-banner")} alt="" />
-      {t(
-        "Proudly serving Malaysia for the past 15 years",
-        "Berkhidmat untuk Malaysia selama 15 tahun",
-      )}
+      <p>
+        {t("Proudly serving Malaysia", "Berkhidmat untuk Malaysia")}
+        <br />
+        {t("for the past 15 years", "selama 15 tahun")}
+      </p>
     </div>
   );
 }
@@ -944,7 +944,7 @@ function Home() {
         </div>
         <div className="tourplayer">
           <span className="tourlabel">
-            {t("Installation photo tour", "Tayangan foto pemasangan")}
+            {t("Installation photo tour · Illustrated cover", "Tayangan foto pemasangan · Ilustrasi muka depan")}
           </span>
           <video
             onPlay={() => setPaused(false)}
@@ -954,7 +954,7 @@ function Home() {
             preload="none"
             controls
             playsInline
-            poster={img("installation-poster")}
+            poster="/images/installation-tour-cover.webp"
             aria-label={t(
               "Installation photo tour",
               "Tayangan foto pemasangan",
@@ -1019,8 +1019,18 @@ function Home() {
     </>
   );
 }
+function GalleryPhoto({ name, alt, widths = [600, 1200] }) {
+  return (
+    <img
+      src={`/images/${name}-1200.webp`}
+      srcSet={widths.map(width => `/images/${name}-${width}.webp ${width}w`).join(", ")}
+      sizes="(max-width: 700px) 92vw, (min-width: 1800px) 800px, 45vw"
+      width="1200" height="1200" loading="lazy" decoding="async" alt={alt}
+    />
+  );
+}
 function Services() {
-  const { t, title } = useSite(),
+  const { t } = useSite(),
     [selected, set] = useState(0);
   const routes = [
     "home-carpets",
@@ -1030,9 +1040,15 @@ function Services() {
   ];
   const photos = [
     ["freeway-living-room", "patterned-carpet-room"],
-    ["mosque-dengkil", "mosque-klang"],
-    ["floor-home.png", "floor-school.png"],
+    ["maroon-prayer-hall", "navy-prayer-hall"],
+    ["floor-laundry", "floor-music"],
     ["office-open-plan", "office-meeting-room"],
+  ];
+  const photoLabels = [
+    [t("Green striped carpet in a living room", "Karpet berjalur hijau di ruang tamu"), t("Patterned carpet in a sunlit interior", "Karpet bercorak di ruang yang cerah")],
+    [t("Maroon prayer carpet in a bright hall", "Karpet saf merah tua di ruang solat yang cerah"), t("Navy prayer carpet with gold row borders", "Karpet saf biru tua dengan sempadan emas")],
+    [t("Walnut-look laminate in a laundry room", "Lantai lamina bercorak walnut di bilik dobi"), t("Light oak-look flooring in a music room", "Lantai bercorak kayu oak cerah di bilik muzik")],
+    [t("Carpet tiles throughout an open-plan office", "Jubin karpet di pejabat pelan terbuka"), t("Textured carpet tiles in a meeting room", "Jubin karpet bertekstur di bilik mesyuarat")],
   ];
   return (
     <div className="expertise">
@@ -1056,20 +1072,15 @@ function Services() {
       <div className="gallery">
         {photos[selected].map((p, k) => (
           <Go to={routes[selected]} key={p}>
-            {selected === 3 || selected === 0 ? (
-              <img
-                src={"/images/" + p + "-1200.webp"}
-                srcSet={(selected === 3 ? [600, 1200, 1600] : [600, 1200]).map(w => "/images/" + p + "-" + w + ".webp " + w + "w").join(", ")}
-                sizes="(min-width: 1900px) 780px, 44vw"
-                width="1200" height="1200" loading="lazy" decoding="async"
-                alt={selected === 0 ? (k === 0 ? t("Green striped carpet in a living room", "Karpet berjalur hijau di ruang tamu") : t("Patterned carpet in a sunlit interior", "Karpet bercorak di ruang yang cerah")) : k === 0 ? t("Carpet tiles throughout an open-plan office", "Jubin karpet di pejabat pelan terbuka") : t("Textured carpet tiles in a meeting room", "Jubin karpet bertekstur di bilik mesyuarat")}
-              />
-            ) : (
-              <img src={img(p)} alt={title(routes[selected]) + " · " + (k + 1)} />
-            )}
+            <GalleryPhoto
+              name={p}
+              widths={selected === 3 ? [600, 1200, 1600] : undefined}
+              alt={photoLabels[selected][k]}
+            />
           </Go>
         ))}
       </div>
+      <small>{t("Design visualisations", "Visualisasi reka bentuk")}</small>
     </div>
   );
 }
@@ -1262,8 +1273,8 @@ function FamilyGrid({ category, rows }) {
 function Category({ i, families }) {
   const { t, bm } = useSite();
   const [facet, choose] = useState(0),
-    [value, select] = useState(""),
-    [search, setSearch] = useState("");
+    [value, select] = useState("");
+  const [visibleFamilies, setVisibleFamilies] = useState(0);
   const labels = [
     ["All loop pile", "Colour", "Texture", "Roll width"],
     ["All tiles", "50 × 50 cm", "25 × 100 cm", "Colour"],
@@ -1399,6 +1410,7 @@ function Category({ i, families }) {
     }[e.title];
     return {
       name: e.title,
+      familyName: family?.name,
       category: bm
         ? [
             catBM[0],
@@ -1433,9 +1445,20 @@ function Category({ i, families }) {
       label={t("Collection filters", "Penapis koleksi")}
     />
   );
+  const remainingFamilies = families.filter(family => !cards.some(card => card.familyName === family.name));
   const result =
     facet === 0 ? (
-      <Cards items={cards} />
+      <>
+        <Cards items={cards} />
+        {visibleFamilies > 0 && <FamilyGrid category={i} rows={remainingFamilies.slice(0, visibleFamilies)} />}
+        {visibleFamilies < remainingFamilies.length && (
+          <div className="actions">
+            <button className="btn" type="button" onClick={() => setVisibleFamilies(count => count + 12)}>
+              {t("Show more collections", "Lihat lebih banyak koleksi")} ({remainingFamilies.length - visibleFamilies})
+            </button>
+          </div>
+        )}
+      </>
     ) : name === "Clearance" ? (
       <CategoryCards indices={[5]} />
     ) : (
@@ -1461,35 +1484,6 @@ function Category({ i, families }) {
         )}
       </div>
     );
-  const searchResults = families.filter(f => f.name.toLowerCase().includes(search.trim().toLowerCase()));
-  const collectionDirectory = (
-    <div className={mosque ? "project-directory dirwrap" : "wrap dirwrap"}>
-        <details>
-          <summary>
-            {t("Collection directory", "Direktori koleksi")} ({families.length})
-          </summary>
-          <input
-            className="search"
-            aria-label={t("Search collections", "Cari koleksi")}
-            placeholder={t(
-              "Search by collection name",
-              "Cari mengikut nama koleksi",
-            )}
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <FamilyGrid category={i} rows={searchResults} />
-          {!searchResults.length && (
-            <p>
-              {t(
-                "No collections match your search.",
-                "Tiada koleksi yang sepadan.",
-              )}
-            </p>
-          )}
-        </details>
-      </div>
-  );
   return (
     <>
       <Hero
@@ -1550,10 +1544,9 @@ function Category({ i, families }) {
       {mosque && (
         <>
           <FlagStrip />
-          <MosqueProjects>{collectionDirectory}</MosqueProjects>
+          <MosqueProjects />
         </>
       )}
-      {!mosque && collectionDirectory}
       {!mosque && <Cta />}
     </>
   );
@@ -1900,15 +1893,18 @@ function InstallationAlbum({ project }) {
     ? t("Before installation", "Sebelum pemasangan")
     : t("Installed carpet", "Selepas pemasangan");
   return (
-    <figure className="installation-album">
-      <img
-        src={`/images/mosque-albums/${current.file}.webp`}
-        alt={`${name} — ${stage(current)}`}
-        width={current.width}
-        height={current.height}
-        loading="lazy"
-        decoding="async"
-      />
+    <figure className="installation-album" id="selected-installation">
+      <div className="installation-photo">
+        <img
+          src={`/images/mosque-albums/${current.file}.webp`}
+          alt={`${name} — ${stage(current)}`}
+          width={current.width}
+          height={current.height}
+          style={{ "--original-width": `${current.width}px` }}
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
       <figcaption aria-live="polite">
         <strong>{name}</strong>
         <span>{stage(current)} · {index + 1} / {photos.length}</span>
@@ -1932,80 +1928,38 @@ function InstallationAlbum({ project }) {
   );
 }
 
-function MosqueProjects({ children }) {
+function MosqueProjects() {
   const { t } = useSite();
-  const [group, chooseGroup] = useState("Masjid");
-  const [prefix, chooseLetter] = useState("");
-  const [selection, chooseProject] = useState("");
-  const groups = ["Masjid", "Surau", "Maahad"];
-  const inGroup = installations.filter((p) => p.group === group);
-  const display = (p) => p.name.replace(/^(Masjid|Surau|Maahad) /, "");
-  const letters = [...new Set(inGroup.map((p) => display(p)[0]))].sort();
-  const filtered = inGroup.filter((p) => display(p).startsWith(prefix));
-  const selected = filtered.find((p) => p.name === selection) || filtered[0];
+  const [selected, chooseProject] = useState(installations[0]);
   return (
     <Group pale>
-      <div className="center">
-        <h2>
-          {t("Carpet installation for mosques", "Pemasangan karpet masjid")}
-        </h2>
+      <div className="center installation-heading">
+        <h2>{t("Carpet installation for mosques", "Pemasangan karpet masjid")}</h2>
         <p>
           {t(
-            "We take pride and responsibility in the work we do. Here are some examples.",
-            "Lihat gambar hasil pemasangan kami.",
+            "Explore carpet installations at mosques and suraus across Malaysia. Select a location to see its photos.",
+            "Lihat pemasangan karpet di masjid dan surau di seluruh Malaysia. Pilih lokasi untuk melihat gambarnya.",
           )}
         </p>
       </div>
-      <div className="projectcontrols">
-        <Chips
-          options={groups}
-          value={groups.indexOf(group)}
-          onChange={(n) => {
-            chooseGroup(groups[n]);
-            chooseLetter("");
-            chooseProject("");
-          }}
-          label={t("Project type", "Jenis projek")}
-        />
-        <div
-          className="letters"
-          role="group"
-          aria-label={t(
-            "Filter projects by name",
-            "Tapis projek mengikut nama",
-          )}
-        >
-          {["", ..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].map((l) => (
-            <button
-              type="button"
-              key={l}
-              disabled={!!l && !letters.includes(l)}
-              onClick={() => {
-                chooseLetter(l);
-                chooseProject("");
-              }}
-              aria-pressed={prefix === l}
-            >
-              {l || t("All", "Semua")}
-            </button>
-          ))}
+      <div className="projectbrowser installation-projects">
+        <div className="projectlist" role="group" aria-label={t("Installation projects", "Projek pemasangan")}>
+          <div className="installation-names">
+            {installations.map((project) => (
+              <button
+                type="button"
+                key={project.name}
+                aria-controls="selected-installation"
+                aria-pressed={selected.name === project.name}
+                onClick={() => chooseProject(project)}
+              >
+                {project.fullName || project.name}
+              </button>
+            ))}
+          </div>
         </div>
+        <InstallationAlbum key={selected.name} project={selected} />
       </div>
-      <div className="projectbrowser">
-        <div className="projectlist">
-          {filtered.map((p) => (
-            <button
-              key={p.name}
-              aria-pressed={selected.name === p.name}
-              onClick={() => chooseProject(p.name)}
-            >
-              {display(p)}
-            </button>
-          ))}
-        </div>
-        {selected && <InstallationAlbum key={selected.name} project={selected} />}
-      </div>
-      {children}
     </Group>
   );
 }
@@ -2019,10 +1973,22 @@ function ProjectGallery() {
     t("Restaurants and cafés", "Restoran dan kafe"),
   ];
   const photos = [
-    "floor-home.png",
-    "floor-school.png",
-    "floor-lobby.png",
-    "floor-cafe.png",
+    [
+      ["floor-laundry", t("Walnut-look laminate in a laundry room", "Lantai lamina bercorak walnut di bilik dobi")],
+      ["floor-sitting", t("Walnut-look planks in a sitting room", "Lantai bercorak walnut di ruang tamu")],
+    ],
+    [
+      ["floor-music", t("Pale wood flooring in a school music room", "Lantai kayu cerah di bilik muzik sekolah")],
+      ["floor-music-detail", t("Floor finish around the piano", "Kemasan lantai di bawah piano")],
+    ],
+    [
+      ["floor-entrance", t("Light planks across a building lobby", "Lantai kayu cerah di lobi bangunan")],
+      ["floor-entrance-detail", t("Plank edges along the lobby columns", "Tepi papan lantai di sisi tiang lobi")],
+    ],
+    [
+      ["floor-coffee", t("Honey-toned planks in a café dining area", "Lantai berwarna madu di ruang makan kafe")],
+      ["floor-coffee-detail", t("Flooring beneath the café seating", "Lantai di bawah kerusi kafe")],
+    ],
   ];
   return (
     <Group pale>
@@ -2047,18 +2013,9 @@ function ProjectGallery() {
           onChange={set}
         />
       </div>
-      <figure className={"projectphoto " + (n === 0 ? "floorpair" : "")}>
-        <img src={img(photos[n])} alt={labels[n]} />
-        {n === 0 && (
-          <img
-            src={img("floor-home-second")}
-            alt={t(
-              "Wood-look floor in a living area",
-              "Lantai bercorak kayu di ruang tamu",
-            )}
-          />
-        )}
-        <figcaption>{labels[n]}</figcaption>
+      <figure className="projectphoto floorpair">
+        {photos[n].map(([name, alt]) => <GalleryPhoto key={name} name={name} alt={alt} />)}
+        <figcaption>{labels[n]} · {t("Flooring visualisation", "Visualisasi lantai")}</figcaption>
       </figure>
     </Group>
   );

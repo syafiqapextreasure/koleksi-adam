@@ -128,6 +128,7 @@ textarea:focus-visible {
   transform: translateX(-50%);
 }
 .brand img {
+  height: auto;
   width: 235px;
   display: block;
 }
@@ -787,22 +788,6 @@ article .btn {
   height: 290px;
   object-fit: cover;
 }
-.flagstrip {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  background: linear-gradient(115deg, #233c6b, #4262a2);
-  color: white;
-  padding: 42px 20px;
-  font-size: clamp(20px, 3vw, 40px);
-  text-align: center;
-  font-weight: 650;
-  letter-spacing: -0.035em;
-}
-.flagstrip span {
-  font-size: 1.4em;
-}
 .quote,
 .servicepair,
 .reviewrow {
@@ -923,17 +908,6 @@ article .btn {
 .rug {
   margin-top: 28px;
 }
-.dirwrap {
-  margin-bottom: 36px;
-}
-.dirwrap details {
-  border-block: 1px solid var(--line);
-  padding: 16px 0;
-}
-.dirwrap summary {
-  font-weight: 700;
-  cursor: pointer;
-}
 .facetresults {
   margin-top: 24px;
 }
@@ -948,10 +922,6 @@ article section h3 {
   text-align: center;
 }
 @media (max-width: 650px) {
-  .flagstrip {
-    padding: 30px 20px;
-    gap: 12px;
-  }
   .maplink img {
     height: 220px;
   }
@@ -1018,28 +988,10 @@ article section h3 {
   color: var(--navy);
 }
 .navflag {
-  width: 20px;
-  height: 20px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-.flagstrip {
-  position: relative;
-  overflow: hidden;
-  min-height: 172px;
-  padding: 32px 9% 32px 42%;
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 700;
-  justify-content: flex-start;
-}
-.flagstrip img {
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 37%;
-  height: 100%;
-  object-fit: fill;
-  mask-image: linear-gradient(to right, black 90%, transparent);
+  display: block;
+  width: 24px;
+  height: auto;
+  flex: none;
 }
 .quote {
   width: min(1150px, calc(100% - 64px));
@@ -1177,11 +1129,6 @@ article section h3 {
   }
   .hero .actions .btn {
     width: auto;
-  }
-  .flagstrip {
-    padding: 20px 4% 20px 42%;
-    min-height: 88px;
-    font-size: 17px;
   }
   .quote {
     width: calc(100% - 40px);

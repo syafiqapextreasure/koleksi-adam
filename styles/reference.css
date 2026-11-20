@@ -114,21 +114,21 @@
   cursor: default;
 }
 .flagstrip {
-  min-height: 0;
-  aspect-ratio: 1280/208;
-  background: url("/images/service-banner.jpg") center/100% 100% no-repeat;
-  color: transparent;
-}
-.flagstrip img {
-  display: none;
-}
-html[lang^="ms"] .flagstrip {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: 1280 / 208;
+  background: #2b4577 url("/images/serving-malaysia.svg") center / 100% 100% no-repeat;
   color: white;
-  background: linear-gradient(110deg, #213655, #3d5796);
-  padding-left: 40%;
 }
-html[lang^="ms"] .flagstrip img {
-  display: block;
+.flagstrip p {
+  margin: 0 3% 0 38.2%;
+  font-size: clamp(14px, 2.68vw, 88px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
 }
 .timeline {
   margin-top: 120px;
@@ -189,6 +189,7 @@ html[lang^="ms"] .flagstrip img {
   aspect-ratio: 1;
 }
 .floorpair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 36px;
 }
 .payfeatures {
@@ -268,6 +269,7 @@ html[lang^="ms"] .flagstrip img {
     font-size: 13px;
   }
   .flagstrip {
+    min-height: 84px;
     aspect-ratio: 5;
   }
   .foot img {
@@ -348,4 +350,3 @@ html[lang^="ms"] .flagstrip img {
 .family-copy dd { font-weight: 600; }
 .family-copy b { margin-top: auto; padding-top: .55rem; color: #243e67; font-size: .9em; }
 .family-card > a:hover h3, .family-card > a:focus-visible h3 { text-decoration: underline; text-underline-offset: .15em; }
-.project-directory { margin-block-start: 2rem; }

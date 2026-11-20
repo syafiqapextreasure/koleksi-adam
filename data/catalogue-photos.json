@@ -42,10 +42,10 @@
     "height": 1067
   },
   "flooring-installation": {
-    "src": "/images/catalogue-scenes/laminate-floor-interior-1200-d0fa185b.webp",
-    "srcSet": "/images/catalogue-scenes/laminate-floor-interior-640-bd2ecb28.webp 640w, /images/catalogue-scenes/laminate-floor-interior-1200-d0fa185b.webp 1200w",
-    "width": 1200,
-    "height": 533
+    "src": "/images/flooring-dining-1983.webp",
+    "srcSet": "/images/flooring-dining-640.webp 640w, /images/flooring-dining-1120.webp 1120w, /images/flooring-dining-1983.webp 1983w",
+    "width": 1983,
+    "height": 793
   },
   "iconic-carbon": {
     "src": "/images/catalogue-scenes/carbon-carpet-interior-1774-fb184d7b.webp",

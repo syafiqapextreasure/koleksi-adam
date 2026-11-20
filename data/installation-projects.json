@@ -5,52 +5,60 @@
     "photo": "mosque-kebun-baru",
     "photos": [
       {
-        "file": "mosque-kebun-baru-1",
-        "width": 1024,
-        "height": 768,
-        "stage": "after"
-      },
-      {
-        "file": "mosque-kebun-baru-2",
-        "width": 768,
-        "height": 1024,
-        "stage": "after"
-      },
-      {
-        "file": "mosque-kebun-baru-3",
-        "width": 1024,
-        "height": 768,
-        "stage": "after"
-      },
-      {
-        "file": "mosque-kebun-baru-4",
-        "width": 1024,
-        "height": 768,
-        "stage": "after"
-      },
-      {
         "file": "mosque-kebun-baru-5",
         "width": 1024,
         "height": 768,
-        "stage": "before"
+        "stage": "before",
+        "source": "Mosque.pdf · desktop frame · page 1 · X9.jp2"
       },
       {
         "file": "mosque-kebun-baru-6",
         "width": 1024,
         "height": 768,
-        "stage": "before"
+        "stage": "before",
+        "source": "Mosque.pdf · desktop frame · page 1 · X11.jp2"
       },
       {
         "file": "mosque-kebun-baru-7",
         "width": 1024,
         "height": 768,
-        "stage": "before"
+        "stage": "before",
+        "source": "Mosque.pdf · desktop frame · page 1 · X12.jp2"
       },
       {
         "file": "mosque-kebun-baru-8",
         "width": 1024,
         "height": 768,
-        "stage": "before"
+        "stage": "before",
+        "source": "Mosque.pdf · desktop frame · page 1 · X10.jp2"
+      },
+      {
+        "file": "mosque-kebun-baru-1",
+        "width": 1024,
+        "height": 768,
+        "stage": "after",
+        "source": "Mosque.pdf · desktop frame · page 1 · X4.jp2"
+      },
+      {
+        "file": "mosque-kebun-baru-2",
+        "width": 768,
+        "height": 1024,
+        "stage": "after",
+        "source": "Mosque.pdf · desktop frame · page 1 · X8.jp2"
+      },
+      {
+        "file": "mosque-kebun-baru-3",
+        "width": 1024,
+        "height": 768,
+        "stage": "after",
+        "source": "Mosque.pdf · desktop frame · page 1 · X7.jp2"
+      },
+      {
+        "file": "mosque-kebun-baru-4",
+        "width": 1024,
+        "height": 768,
+        "stage": "after",
+        "source": "Mosque.pdf · desktop frame · page 1 · X6.jp2"
       }
     ]
   },
@@ -63,9 +71,11 @@
         "file": "maahad-tahfiz-baitul-hasanah-pahang-1",
         "width": 500,
         "height": 547,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Maahad-Tahfiz-Baitul-Hasanah-Pahang.jpg"
       }
-    ]
+    ],
+    "fullName": "Surau Maahad Tahfiz Baitul Hasanah, Pahang"
   },
   {
     "name": "Masjid Al Falah Jengka 7",
@@ -76,9 +86,11 @@
         "file": "masjid-al-falah-jengka-7-1",
         "width": 500,
         "height": 457,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Masjid-Al-Falah-Jengka-7.jpg"
       }
-    ]
+    ],
+    "fullName": "Masjid Al Falah, Jengka 7"
   },
   {
     "name": "Masjid Al Ilmi Dengkil",
@@ -89,9 +101,11 @@
         "file": "masjid-al-ilmi-dengkil-1",
         "width": 500,
         "height": 500,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Masjid-Al-Ilmi-Dengkil.jpg"
       }
-    ]
+    ],
+    "fullName": "Masjid Al Ilmi, Dengkil"
   },
   {
     "name": "Masjid An Nur Temasya Glenmarie Subang",
@@ -102,9 +116,11 @@
         "file": "masjid-an-nur-temasya-glenmarie-subang-1",
         "width": 500,
         "height": 431,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Masjid-An-Nur-Temasya-Glenmarie-Subang.jpg"
       }
-    ]
+    ],
+    "fullName": "Masjid An Nur, Temasya Glenmarie, Selangor"
   },
   {
     "name": "Masjid Bandar Bukit Puchong",
@@ -115,9 +131,11 @@
         "file": "masjid-bandar-bukit-puchong-1",
         "width": 500,
         "height": 446,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Masjid-Bandar-Bukit-Puchong.jpg"
       }
-    ]
+    ],
+    "fullName": "Masjid Bandar, Bukit Puchong, Selangor"
   },
   {
     "name": "Masjid Dato Dagang Klang",
@@ -128,27 +146,31 @@
         "file": "masjid-dato-dagang-klang-1",
         "width": 500,
         "height": 435,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Masjid-Dato-Dagang-Klang.jpg"
       }
-    ]
+    ],
+    "fullName": "Masjid Dato Dagang, Klang"
   },
   {
     "name": "Masjid Jamek Sultan Tinggi",
     "group": "Masjid",
     "photo": "project-masjid-jamek-sultan-tinggi",
-    "fullName": "Masjid Jamek Sultan Hisamuddin, Bandar Baru Salak Tinggi",
+    "fullName": "Masjid Jamek Sultan Hisamuddin, Bandar Baru Salak Tinggi, Selangor",
     "photos": [
       {
         "file": "masjid-jamek-sultan-tinggi-1",
         "width": 500,
         "height": 411,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Masjid-Jamek-Sultan-Tinggi.jpg"
       },
       {
         "file": "masjid-jamek-sultan-tinggi-2",
         "width": 525,
         "height": 496,
-        "stage": "after"
+        "stage": "after",
+        "source": "Mosque.pdf · desktop frame · page 1 · X3.jp2"
       }
     ]
   },
@@ -161,9 +183,11 @@
         "file": "masjid-jamiatus-solehah-dengkil-1",
         "width": 500,
         "height": 421,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Masjid-Jamiatus-Solehah-Dengkil.jpg"
       }
-    ]
+    ],
+    "fullName": "Masjid Jamiatus Solehah, Dengkil"
   },
   {
     "name": "Masjid Saidina Hamzah Kl",
@@ -174,9 +198,11 @@
         "file": "masjid-saidina-hamzah-kl-1",
         "width": 500,
         "height": 412,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Masjid-Saidina-Hamzah-KL.jpg"
       }
-    ]
+    ],
+    "fullName": "Masjid Saidina Hamzah, Kuala Lumpur"
   },
   {
     "name": "Masjid Tengku Ampuan Rahimah Klang",
@@ -187,9 +213,11 @@
         "file": "masjid-tengku-ampuan-rahimah-klang-1",
         "width": 500,
         "height": 338,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Masjid-Tengku-Ampuan-Rahimah-Klang.jpg"
       }
-    ]
+    ],
+    "fullName": "Masjid Jamek Ar-Rahimiah, Klang"
   },
   {
     "name": "Masjid Bandar Diraja Klang",
@@ -200,15 +228,18 @@
         "file": "masjid-bandar-diraja-klang-1",
         "width": 500,
         "height": 469,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Masjid-bandar-diraja-klang.jpg"
       },
       {
         "file": "masjid-bandar-diraja-klang-2",
         "width": 800,
         "height": 800,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2021/03/6bandardiraja.png"
       }
-    ]
+    ],
+    "fullName": "Masjid Bandar Diraja, Klang"
   },
   {
     "name": "Surau Al Mashyur Klang",
@@ -219,9 +250,11 @@
         "file": "surau-al-mashyur-klang-1",
         "width": 600,
         "height": 502,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Surau-Al-Mashyur-Klang-1.jpg"
       }
-    ]
+    ],
+    "fullName": "Surau Al-Mashyur, Klang"
   },
   {
     "name": "Surau An Nur Lp8 Seri Kembangan",
@@ -232,9 +265,11 @@
         "file": "surau-an-nur-lp8-seri-kembangan-1",
         "width": 500,
         "height": 445,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Surau-An-Nur-LP8-Seri-Kembangan.jpg"
       }
-    ]
+    ],
+    "fullName": "Surau An-Nur, LP8/1 Seri Kembangan, Selangor"
   },
   {
     "name": "Surau An Nur Taman Mastiara Kuala Lumpur",
@@ -245,9 +280,11 @@
         "file": "surau-an-nur-taman-mastiara-kuala-lumpur-1",
         "width": 600,
         "height": 493,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Surau-An-Nur-Taman-Mastiara-Kuala-Lumpur.jpg"
       }
-    ]
+    ],
+    "fullName": "Surau An-Nur, Taman Mastiara, Kuala Lumpur"
   },
   {
     "name": "Surau As Salam Setia Damai Setia Alam",
@@ -258,9 +295,11 @@
         "file": "surau-as-salam-setia-damai-setia-alam-1",
         "width": 600,
         "height": 506,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Surau-As-Salam-Setia-Damai-Setia-Alam.jpg"
       }
-    ]
+    ],
+    "fullName": "Surau As-Salam Setia Alam, Setia Damai, Selangor"
   },
   {
     "name": "Surau Paid Sepang",
@@ -271,9 +310,11 @@
         "file": "surau-paid-sepang-1",
         "width": 500,
         "height": 483,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Surau-Paid-Sepang.jpg"
       }
-    ]
+    ],
+    "fullName": "Surau PAID, Sepang, Selangor"
   },
   {
     "name": "Masjid Ar Ridhuan Hulu Klang",
@@ -284,14 +325,32 @@
         "file": "masjid-ar-ridhuan-hulu-klang-1",
         "width": 500,
         "height": 438,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/masjid-ar-ridhuan-hulu-klang.jpg"
       },
       {
         "file": "masjid-ar-ridhuan-hulu-klang-2",
         "width": 800,
         "height": 800,
-        "stage": "after"
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2021/03/7arridhuan.png"
       }
-    ]
+    ],
+    "fullName": "Masjid Ar Ridhuan, Hulu Klang"
+  },
+  {
+    "name": "Masjid DiRaja Sultan Suleiman, Klang",
+    "group": "Masjid",
+    "photo": "project-masjid-diraja-sultan-suleiman-klang",
+    "photos": [
+      {
+        "file": "masjid-diraja-sultan-suleiman-klang-1",
+        "stage": "after",
+        "source": "https://www.adamkarpets.com.my/wp-content/uploads/2023/01/Masjid-bandar-diraja-klang-1.jpg",
+        "width": 500,
+        "height": 432
+      }
+    ],
+    "fullName": "Masjid Diraja Sultan Suleiman, Klang"
   }
 ]
