@@ -1,0 +1,329 @@
+.slider {
+  position: relative;
+}
+.slider .hero h1 {
+  margin-bottom: 22px;
+}
+.slidecontrols {
+  position: absolute;
+  bottom: 20px;
+  right: max(5%, calc((100% - 1080px) / 2));
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.slidecontrols button {
+  background: #172e50bf;
+  color: white;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+.slidecontrols button[aria-pressed="false"] {
+  color: #aabbd0;
+}
+.group .center:has(> .intro) {
+  max-width: 1040px;
+}
+.center:has(> .intro) > :is(h2, h3) {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 21px;
+}
+.center .intro {
+  max-width: 1000px;
+  margin: 30px auto 58px;
+  line-height: 1.24;
+  font-size: clamp(23px, 2.65vw, 35px);
+}
+.wrap:has(> .tourplayer) {
+  max-width: 1140px;
+  width: calc(100% - 64px);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+}
+.wrap:has(> .tourplayer) > .center,
+.wrap:has(> .tourplayer) > video {
+  grid-column: 1/-1;
+}
+.wrap:has(> .tourplayer) > p,
+.wrap:has(> .tourplayer) > .actions {
+  margin: 0;
+  align-self: center;
+}
+.wrap:has(> .tourplayer) > video {
+  aspect-ratio: 1.96;
+  object-fit: cover;
+}
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+.chips button {
+  width: auto;
+  min-width: 0;
+  padding: 10px 16px;
+  line-height: 1.3;
+  white-space: normal;
+}
+.center .chips,
+.projectcontrols .chips,
+.wrap:has(.rug) > .chips {
+  justify-content: center;
+}
+.center .chips button,
+.projectcontrols .chips button,
+.wrap:has(.rug) > .chips button,
+.servicepair .chips button {
+  background: white;
+  border: 0;
+}
+.chips button:hover,
+.letters button:enabled:hover,
+.projectlist button:hover {
+  background: #dce8f7;
+}
+.center .chips [aria-pressed="true"],
+.projectcontrols .chips [aria-pressed="true"],
+.wrap:has(.rug) > .chips [aria-pressed="true"],
+.servicepair .chips [aria-pressed="true"] {
+  background: #1e3255;
+  color: white;
+}
+.btn:hover,
+.btn:focus-visible {
+  background: #304d78;
+  color: white;
+  filter: none;
+}
+.btn.green:hover,
+.btn.green:focus-visible {
+  background: #187511;
+}
+.btn.green {
+  background: #269817;
+}
+.letters button {
+  padding: 6px 8px;
+}
+.letters button:disabled {
+  opacity: 0.48;
+  cursor: default;
+}
+.flagstrip {
+  min-height: 0;
+  aspect-ratio: 1280/208;
+  background: url("/images/service-banner.jpg") center/100% 100% no-repeat;
+  color: transparent;
+}
+.flagstrip img {
+  display: none;
+}
+html[lang^="ms"] .flagstrip {
+  color: white;
+  background: linear-gradient(110deg, #213655, #3d5796);
+  padding-left: 40%;
+}
+html[lang^="ms"] .flagstrip img {
+  display: block;
+}
+.timeline {
+  margin-top: 120px;
+  max-width: 1000px;
+}
+.timeline:before {
+  width: 0;
+  background: none;
+  border-left: 2px dashed #6c798e;
+}
+.timeline li:after {
+  width: 14px;
+  height: 14px;
+  background: var(--navy);
+}
+@media (min-width: 651px) {
+  .timeline li:nth-child(odd) {
+    margin-left: 50%;
+    text-align: left;
+    padding: 0 0 54px 30px;
+  }
+  .timeline li:nth-child(even) {
+    margin-left: 0;
+    text-align: right;
+    padding: 0 30px 54px 0;
+  }
+  .timeline li:nth-child(odd):after {
+    left: -8px;
+    right: auto;
+  }
+  .timeline li:nth-child(even):after {
+    left: auto;
+    right: -8px;
+  }
+}
+.servicepair:not(.rug) .chips {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.servicepair:not(.rug) .chips button {
+  text-align: left;
+}
+.servicepair.rug {
+  align-items: start;
+  grid-template-columns: 1.32fr 1fr;
+}
+.rug > img {
+  height: auto;
+  aspect-ratio: 1;
+}
+.wrap:has(.rug) > .center p,
+.center:has(+ .projectphoto) > p {
+  margin: 20px auto 32px;
+  max-width: 1020px;
+}
+.floorpair img {
+  height: auto;
+  aspect-ratio: 1;
+}
+.floorpair {
+  gap: 36px;
+}
+.payfeatures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 22px;
+}
+.payfeatures a {
+  text-decoration: none;
+}
+.payfeatures b {
+  display: inline-grid;
+  place-items: center;
+  background: var(--navy);
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+.tabband:has(.payrow) {
+  background: white;
+}
+.foot .social a {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background: white;
+  color: var(--navy);
+}
+.foot img {
+  width: 220px;
+  max-width: 100%;
+}
+.foot a svg {
+  vertical-align: middle;
+}
+.group .wrap > p + .featurephoto {
+  display: block;
+  margin-top: 24px;
+  width: 100%;
+  height: clamp(260px, 36.7vw, 470px);
+}
+.wrap:has(> .featurephoto) dl dt {
+  width: 18%;
+}
+.center:has(+ .projectphoto) > h2,
+.wrap:has(.rug) > .center h2,
+.center:has(+ .projectcontrols) > h2 {
+  font-size: clamp(32px, 4.4vw, 58px);
+}
+@media (max-width: 650px) {
+  .timeline {
+    margin-top: 50px;
+  }
+  .wrap:has(> .tourplayer) {
+    width: calc(100% - 40px);
+    display: block;
+  }
+  .wrap:has(> .tourplayer) > .actions {
+    margin-top: 18px;
+  }
+  .chips button {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+  .servicepair.rug {
+    grid-template-columns: 1fr;
+  }
+  .floorpair {
+    gap: 12px;
+  }
+  .payfeatures {
+    gap: 10px;
+    font-size: 13px;
+  }
+  .flagstrip {
+    aspect-ratio: 5;
+  }
+  .foot img {
+    width: 160px;
+  }
+}
+.tourplayer {
+  grid-column: 1/-1;
+  position: relative;
+  background: #182841;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.tourplayer video {
+  width: 100%;
+  aspect-ratio: 1.96;
+  display: block;
+  object-fit: cover;
+}
+.tourplayer:has(button) video {
+  opacity: 0.72;
+}
+.tourplayer button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid white;
+  border-radius: 50%;
+  background: #172e5066;
+  color: white;
+  width: 62px;
+  height: 62px;
+  font-size: 24px;
+}
+.wrap:has(.servicepair:not(.rug)) .servicepair {
+  grid-template-columns: 0.72fr 1fr;
+}
+.group:has(.servicepair:not(.rug)) {
+  background: white;
+}
+.servicepair:not(.rug) > img {
+  height: auto;
+  aspect-ratio: 1;
+}
+.actions a[href*="2026%20MOSQUE%20CARPET.pdf"] {
+  background: #050505;
+}
+.actions a[href*="2026%20MOSQUE%20CARPET.pdf"]:hover {
+  background: #21375d;
+}
+@media (max-width: 650px) {
+  .wrap:has(.servicepair:not(.rug)) .servicepair {
+    grid-template-columns: 1fr;
+  }
+  .tourplayer {
+    margin-bottom: 16px;
+  }
+}

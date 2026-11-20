@@ -1,0 +1,9 @@
+node_modules/
+.next/
+.private/
+.worker-assets/
+.wrangler/
+public/catalogues/
+.dev.vars
+.env*.local
+/data/design.cjs

@@ -1,0 +1,54 @@
+/* Expand the original desktop composition proportionally on wide displays. */
+@media (min-width: 1281px) {
+  body { font-size: clamp(1rem, 1.16vw, 1.3125rem); }
+  .wrap, .quote { width: min(84.375%, 98rem); }
+  .wrap:has(> .tourplayer) { width: min(89%, 100rem); max-width: none; }
+  .hero, .homehero { height: clamp(31.25rem, 39vw, 49rem); }
+  .hero h1, .hero.photohero h1, .product h1 { max-width: 18em; font-size: clamp(4rem, 5.1vw, 6.75rem); }
+  .hero.photohero h1 { font-size: clamp(5rem, 6.25vw, 7.25rem); }
+  h2 { font-size: clamp(3rem, 3.7vw, 4.5rem); }
+  h3 { font-size: clamp(1.4375rem, 1.65vw, 2.125rem); }
+  .hero p, .btn, .card p, .card b, .chips button, .article p { font-size: clamp(1rem, 1.08vw, 1.3125rem); }
+  .card img { height: auto; aspect-ratio: 1.65; }
+  .slidecontrols { right: max(7.8125%, calc((100% - 98rem) / 2)); }
+}
+.group { padding-block: clamp(2rem, 5vw, 4.75rem); }
+.timeline { margin-top: clamp(2.5rem, 5vw, 5rem); }
+.timeline li:last-child { padding-bottom: 0; }
+.footpanel p { margin-top: clamp(1.25rem, 3vw, 3rem); }
+.center .intro { margin-block: clamp(1rem, 2vw, 1.875rem) clamp(1.25rem, 3vw, 2.75rem); }
+@media (min-width: 651px) and (max-width: 900px) {
+  .wrap { width: calc(100% - 48px); }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .card img { height: auto; aspect-ratio: 1.55; }
+  .contactgrid, .servicepair, .product { gap: 18px; }
+  .hero, .homehero { height: clamp(24rem, 54vw, 30rem); }
+}
+@media (max-width: 370px) {
+  .wrap, .wrap:has(> .tourplayer), .quote { width: calc(100% - 28px); }
+  .cards, .wrap:has(> .cards > .card:nth-child(2):last-child) > .cards { grid-template-columns: 1fr; }
+  .card img { height: auto; aspect-ratio: 1.65; }
+  .hero h1, .hero.photohero h1, .product h1 { font-size: 2.125rem; overflow-wrap: anywhere; }
+  .btn { white-space: normal; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .heroimage, .slidephoto { top: -8%; height: 116%; translate: 0 var(--parallax-offset, 0px); }
+  .btn, .btn svg, .social a, .reviewnav button, .chips button { transition: transform 180ms ease, background-color 180ms ease, color 180ms ease; }
+  .card img { transition: transform 340ms ease; }
+  .btn:active, .reviewnav button:active { transform: scale(.97); }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .card:hover img { transform: scale(1.035); }
+  .btn:hover svg, .social a:hover { transform: translateY(-2px) rotate(-5deg); }
+  .reviewnav button:hover { transform: translateY(-2px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+@media (max-width: 650px) {
+  .foot { grid-template-columns: repeat(2, minmax(0, 1fr)); overflow-wrap: anywhere; }
+  .reviewrow { flex-wrap: wrap; }
+  .expertise .gallery img { min-width: 0; }
+}
+

@@ -1,0 +1,474 @@
+{
+  "collectionItems": [
+    {
+      "title": "Loop Pile",
+      "category": "BROADLOOM",
+      "description": "Textured surfaces for homes and commercial spaces.",
+      "image": "sapporo",
+      "link": "Loop Pile"
+    },
+    {
+      "title": "Carpet Tiles",
+      "category": "MODULAR",
+      "description": "Square tiles and carpet planks for flexible layouts.",
+      "image": "athenia",
+      "link": "Carpet Tiles"
+    },
+    {
+      "title": "Cut Pile Design",
+      "category": "PATTERNED",
+      "description": "Explore patterned collections and decorative finishes.",
+      "image": "roxbury",
+      "link": "Cut Pile Design"
+    },
+    {
+      "title": "Cut Pile Plain",
+      "category": "PLAIN COLOURS",
+      "description": "Soft textures and coordinated colours for interiors.",
+      "image": "iconic-white",
+      "link": "Cut Pile Plain"
+    },
+    {
+      "title": "Mosque Carpets",
+      "category": "MOSQUE & SURAU",
+      "description": "Explore prayer-hall designs, colours and roll widths.",
+      "image": "kaayna-maroon",
+      "link": "Mosque & Surau"
+    },
+    {
+      "title": "Mosque Clearance",
+      "category": "CLEARANCE 2026 / 2027",
+      "description": "Selected catalogue ranges. Ask about current availability.",
+      "image": "ghazal",
+      "link": "Mosque Clearance"
+    }
+  ],
+  "loops": [
+    {
+      "title": "Cambridge",
+      "category": "LOOP PILE",
+      "description": "100% polypropylene. Explore the catalogue colour range.",
+      "image": "cambridge"
+    },
+    {
+      "title": "Tokyo",
+      "category": "LOOP PILE",
+      "description": "100% BCF Duralox Olefin. Red (227) shown.",
+      "image": "tokyo"
+    },
+    {
+      "title": "Sapporo",
+      "category": "LOOP PILE",
+      "description": "100% BCF Duralox Olefin. Shiko Beige (292) shown.",
+      "image": "sapporo"
+    }
+  ],
+  "tiles": [
+    {
+      "title": "Hilora-S",
+      "category": "ATHENIA-S",
+      "description": "50 × 50 cm carpet tiles. Four catalogue colours.",
+      "image": "hilora",
+      "link": "Hilora-S"
+    },
+    {
+      "title": "Zafira-S",
+      "category": "ATHENIA-S",
+      "description": "Textured loop-pile tiles for patterned layouts.",
+      "image": "zafira",
+      "link": "Hilora-S"
+    },
+    {
+      "title": "Sevora-S",
+      "category": "ATHENIA-S",
+      "description": "Explore four colours and quarter-turn arrangements.",
+      "image": "sevora",
+      "link": "Hilora-S"
+    }
+  ],
+  "patterns": [
+    {
+      "title": "Arrow",
+      "category": "CUT PILE DESIGN",
+      "description": "100% BCF Duralox Olefin. Mallard Green (836) shown.",
+      "image": "arrow"
+    },
+    {
+      "title": "Roxbury Chantelle",
+      "category": "CUT PILE DESIGN",
+      "description": "100% Duralox Heatset Polyester. Explore coordinated colours.",
+      "image": "roxbury"
+    }
+  ],
+  "plains": [
+    {
+      "title": "Royal Iconic",
+      "category": "CUT PILE PLAIN",
+      "description": "100% Soft Nylon. Explore eight catalogue colours.",
+      "image": "iconic-white",
+      "link": "Royal Iconic"
+    },
+    {
+      "title": "Fortia Carbon",
+      "category": "ROYAL ICONIC / 1078",
+      "description": "A dark neutral option from the Royal Iconic range.",
+      "image": "iconic-carbon",
+      "link": "Royal Iconic"
+    }
+  ],
+  "clearances": [
+    {
+      "title": "Ghazal Mosque",
+      "category": "CLEARANCE",
+      "description": "Maza Blue (656). Confirm current availability.",
+      "image": "ghazal"
+    },
+    {
+      "title": "AL Burj Mosque",
+      "category": "CLEARANCE",
+      "description": "Gold. Confirm current availability and pricing.",
+      "image": "al-burj"
+    },
+    {
+      "title": "Jazeera Mosque",
+      "category": "CLEARANCE",
+      "description": "Ruwais Gold, Dhaid Maroon and Masfut Green in the catalogue.",
+      "image": "jazeera"
+    }
+  ],
+  "products": [
+    {
+      "name": "Royal Iconic",
+      "index": 15,
+      "category": "CUT PILE PLAIN",
+      "img": "iconic-white",
+      "desc": "A plain cut-pile carpet made with 100% Soft Nylon. Explore eight catalogue colours, from pale neutrals to deep blue and carbon.",
+      "selected": "Cassiana White (1092)",
+      "source": "2026 Cut Pile Plain · pages 12–14",
+      "note": "Indoor use. Pile direction and dye lots can affect appearance. Request a physical sample before confirming your colour.",
+      "swatches": [
+        [
+          "Cassiana White\n1092",
+          "iconic-1092"
+        ],
+        [
+          "Marcia Beige\n1095",
+          "iconic-1095"
+        ],
+        [
+          "Celia Camel\n1040",
+          "iconic-1040"
+        ],
+        [
+          "Vivia Brown\n1048",
+          "iconic-1048"
+        ],
+        [
+          "Avena Grey\n1072",
+          "iconic-1072"
+        ],
+        [
+          "Fortia Carbon\n1078",
+          "iconic-1078"
+        ],
+        [
+          "Gratia Blue\n1056",
+          "iconic-1056"
+        ],
+        [
+          "Mirena Gold\n1098",
+          "iconic-1098"
+        ]
+      ],
+      "specs": [
+        [
+          "Fibre",
+          "100% Soft Nylon"
+        ],
+        [
+          "Construction",
+          "Plain Cut Pile · Pencil Point Finish"
+        ],
+        [
+          "Dye method",
+          "Solution Dyed"
+        ],
+        [
+          "Pile height",
+          "8 mm (±1 mm)"
+        ],
+        [
+          "Total height",
+          "10 mm (±1 mm)"
+        ],
+        [
+          "Pile weight",
+          "1,300 g/m²"
+        ],
+        [
+          "Total weight",
+          "1,760 g/m²"
+        ],
+        [
+          "Roll width",
+          "3.66 m (12 ft)"
+        ],
+        [
+          "Secondary backing",
+          "Action Fleece"
+        ]
+      ],
+      "related": [
+        {
+          "title": "Cut Pile Plain",
+          "category": "PLAIN COLOURS",
+          "description": "Soft textures and coordinated colours for interiors.",
+          "image": "iconic-white",
+          "link": "Cut Pile Plain"
+        },
+        {
+          "title": "Cut Pile Design",
+          "category": "PATTERNED",
+          "description": "Explore patterned collections and decorative finishes.",
+          "image": "roxbury",
+          "link": "Cut Pile Design"
+        },
+        {
+          "title": "Loop Pile",
+          "category": "BROADLOOM",
+          "description": "Textured surfaces for homes and commercial spaces.",
+          "image": "sapporo",
+          "link": "Loop Pile"
+        }
+      ]
+    },
+    {
+      "name": "Hilora-S",
+      "index": 16,
+      "category": "CARPET TILES / ATHENIA-S",
+      "img": "hilora",
+      "desc": "A textured high-low loop-pile design from the Athenia-S collection. Square tiles offer a choice of layouts and four catalogue colours.",
+      "selected": "Grey (HL01)",
+      "source": "2026 Carpet Tiles · pages 9–10",
+      "note": "The catalogue pattern previews show four tiles in a quarter-turn arrangement. Each individual tile measures 50 × 50 cm.",
+      "swatches": [
+        [
+          "Grey\nHL01",
+          "hilora-HL01"
+        ],
+        [
+          "Carbon\nHL02",
+          "hilora-HL02"
+        ],
+        [
+          "Brown\nHL03",
+          "hilora-HL03"
+        ],
+        [
+          "Black\nHL04",
+          "hilora-HL04"
+        ]
+      ],
+      "specs": [
+        [
+          "Collection",
+          "Athenia-S"
+        ],
+        [
+          "Design",
+          "Hilora-S"
+        ],
+        [
+          "Fibre",
+          "100% Maxlustre PP"
+        ],
+        [
+          "Construction",
+          "Textured Loop Pile (High Low)"
+        ],
+        [
+          "Colour system",
+          "100% Solution Dyed"
+        ],
+        [
+          "Tile size",
+          "50 × 50 cm"
+        ],
+        [
+          "Packing",
+          "20 pieces per carton"
+        ],
+        [
+          "Pile height",
+          "4.5 mm (±0.5 mm)"
+        ],
+        [
+          "Total height",
+          "6.5 mm (±0.5 mm)"
+        ],
+        [
+          "Backing",
+          "ECO Back · PVC-free bitumen"
+        ]
+      ],
+      "related": [
+        {
+          "title": "Carpet Tiles",
+          "category": "MODULAR",
+          "description": "Square tiles and carpet planks for flexible layouts.",
+          "image": "athenia",
+          "link": "Carpet Tiles"
+        },
+        {
+          "title": "Loop Pile",
+          "category": "BROADLOOM",
+          "description": "Textured surfaces for homes and commercial spaces.",
+          "image": "sapporo",
+          "link": "Loop Pile"
+        },
+        {
+          "title": "Cut Pile Design",
+          "category": "PATTERNED",
+          "description": "Explore patterned collections and decorative finishes.",
+          "image": "roxbury",
+          "link": "Cut Pile Design"
+        }
+      ]
+    },
+    {
+      "name": "Kaayna Raudah",
+      "index": 17,
+      "category": "MOSQUE CARPETS",
+      "img": "kaayna-maroon",
+      "desc": "A Wilton-woven mosque carpet with a level cut-pile surface. Explore the catalogue colours and discuss prayer-row alignment with our installation team.",
+      "selected": "Rajab Maroon",
+      "source": "2026 Mosque Carpet · pages 25–26",
+      "note": "Confirm the roll width, prayer-row repeat and room measurements with our team before ordering. Colours shown are catalogue references.",
+      "swatches": [
+        [
+          "Rajab Maroon",
+          "kaayna-maroon"
+        ],
+        [
+          "Alimah Green",
+          "kaayna-green"
+        ],
+        [
+          "Zahan Gold",
+          "kaayna-gold"
+        ],
+        [
+          "Fazli Blue",
+          "kaayna-blue"
+        ]
+      ],
+      "specs": [
+        [
+          "Construction",
+          "Woven Incorporated Wilton (Power Loom)"
+        ],
+        [
+          "Surface",
+          "Level Cut Pile"
+        ],
+        [
+          "Pile content",
+          "100% Coiler Heatset Polypropylene Olefin"
+        ],
+        [
+          "Pile height",
+          "Approximately 13 mm"
+        ],
+        [
+          "Total height",
+          "Approximately 14 mm"
+        ],
+        [
+          "Roll width",
+          "3.97 m (13 ft)"
+        ],
+        [
+          "Prayer-row repeat",
+          "1.33 m"
+        ],
+        [
+          "Origin",
+          "Turkey"
+        ]
+      ],
+      "related": [
+        {
+          "title": "Mosque Carpets",
+          "category": "MOSQUE & SURAU",
+          "description": "Explore prayer-hall designs, colours and roll widths.",
+          "image": "kaayna-maroon",
+          "link": "Mosque & Surau"
+        },
+        {
+          "title": "Mosque Clearance",
+          "category": "CLEARANCE 2026 / 2027",
+          "description": "Selected catalogue ranges. Ask about current availability.",
+          "image": "ghazal",
+          "link": "Mosque Clearance"
+        },
+        {
+          "title": "Loop Pile",
+          "category": "BROADLOOM",
+          "description": "Textured surfaces for homes and commercial spaces.",
+          "image": "sapporo",
+          "link": "Loop Pile"
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "title": "Loop Pile 2024 / 2025",
+      "category": "LATEST SUPPLIED EDITION",
+      "description": "157 pages · PDF\nLoop-pile collections and underlay.",
+      "image": "cover-loop",
+      "action": "Download catalogue",
+      "fit": true
+    },
+    {
+      "title": "Carpet Tiles 2026",
+      "category": "PRODUCT CATALOGUE",
+      "description": "59 pages · PDF\nSquare tiles and carpet planks.",
+      "image": "cover-tiles",
+      "action": "Download catalogue",
+      "fit": true
+    },
+    {
+      "title": "Cut Pile Design 2026",
+      "category": "PRODUCT CATALOGUE",
+      "description": "224 pages · PDF\nPatterned carpet collections.",
+      "image": "cover-cut-design",
+      "action": "Download catalogue",
+      "fit": true
+    },
+    {
+      "title": "Cut Pile Plain 2026",
+      "category": "PRODUCT CATALOGUE",
+      "description": "144 pages · PDF\nPlain-colour carpet collections.",
+      "image": "cover-cut-plain",
+      "action": "Download catalogue",
+      "fit": true
+    },
+    {
+      "title": "Mosque Carpet 2026",
+      "category": "PRODUCT CATALOGUE",
+      "description": "89 pages · PDF\nMosque and surau collections.",
+      "image": "cover-mosque",
+      "action": "Download catalogue",
+      "fit": true
+    },
+    {
+      "title": "Mosque Clearance 2026 / 2027",
+      "category": "CLEARANCE CATALOGUE",
+      "description": "33 pages · PDF\nSelected ranges; enquire about availability.",
+      "image": "cover-clearance",
+      "action": "Download catalogue",
+      "fit": true
+    }
+  ]
+}

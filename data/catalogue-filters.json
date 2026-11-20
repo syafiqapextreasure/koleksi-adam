@@ -1,0 +1,1828 @@
+{
+  "clearance": {
+    "Ghazal Mosque": {
+      "Colour": [
+        "Blue"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Gulzar Mosque": {
+      "Colour": [
+        "Blue",
+        "Maroon"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Ghalib Mosque": {
+      "Colour": [
+        "Blue",
+        "Maroon"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Guzarish Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon",
+        "Grey"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "AL Burj Mosque": {
+      "Colour": [
+        "Gold"
+      ]
+    },
+    "Jazeera Mosque": {
+      "Colour": [
+        "Green",
+        "Gold",
+        "Maroon"
+      ]
+    },
+    "Jasmina Mosque": {
+      "Colour": [
+        "Green",
+        "Maroon",
+        "Grey"
+      ]
+    },
+    "Kabira Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon"
+      ]
+    },
+    "Mecca Aisyah Mosque": {
+      "Colour": [
+        "Maroon"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Soraiya Mosque": {
+      "Colour": [
+        "Blue",
+        "Gold",
+        "Maroon"
+      ]
+    },
+    "Pareeza Mosque": {
+      "Colour": [
+        "Green",
+        "Maroon"
+      ]
+    },
+    "Payazhan Mosque": {
+      "Colour": [
+        "Blue"
+      ]
+    },
+    "Saifyee Mosque": {
+      "Colour": [
+        "Green",
+        "Gold",
+        "Maroon"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Salima Mosque": {
+      "Colour": [
+        "Green",
+        "Maroon",
+        "Beige",
+        "Brown"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Madinah Raudah Mosque": {
+      "Colour": [
+        "Maroon"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Yasmin Mosque": {
+      "Colour": [
+        "Green",
+        "Maroon"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    }
+  },
+  "cut-design": {
+    "Arrow": {
+      "Colour": [
+        "Green",
+        "Grey",
+        "Beige",
+        "Brown",
+        "Red",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ],
+      "Pattern": [
+        "Geometric"
+      ]
+    },
+    "Windsor 2": {
+      "Colour": [
+        "Maroon",
+        "Grey",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    },
+    "Roxbury Chantelle": {
+      "Colour": [
+        "Gold",
+        "Maroon",
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Roxbury Maze": {
+      "Colour": [
+        "Gold",
+        "Maroon",
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Roxbury Stream": {
+      "Colour": [
+        "Gold",
+        "Maroon",
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Boulevard": {
+      "Colour": [
+        "Gold",
+        "Beige",
+        "Red"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Concerto": {
+      "Colour": [
+        "Gold",
+        "Maroon",
+        "Grey",
+        "Brown",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ]
+    },
+    "Momento": {
+      "Colour": [
+        "Gold",
+        "Maroon",
+        "Brown",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ]
+    },
+    "Vintage": {
+      "Colour": [
+        "Gold",
+        "Maroon",
+        "Brown",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ]
+    },
+    "Grandeur Wilton": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Beige",
+        "Red"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Monarcy Wilton": {
+      "Colour": [
+        "Blue",
+        "Beige",
+        "Red"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    },
+    "Regal Point": {
+      "Colour": [
+        "Grey",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Regal Splash": {
+      "Colour": [
+        "Grey",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Regal Waves": {
+      "Colour": [
+        "Grey",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Charisma Wilton": {
+      "Colour": [
+        "Maroon",
+        "Grey",
+        "Beige"
+      ]
+    },
+    "Raudah Nayla": {
+      "Colour": [
+        "Green",
+        "Maroon",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    },
+    "Raudah Masood": {
+      "Colour": [
+        "Green",
+        "Maroon",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    },
+    "Sharonna Wilton": {
+      "Colour": [
+        "Blue",
+        "Gold",
+        "Grey",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Sylviatore Wilton": {
+      "Colour": [
+        "Blue",
+        "Grey"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Imperial Axminster": {
+      "Colour": [
+        "Gold",
+        "Grey",
+        "Beige",
+        "Red",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Material": [
+        "Wool"
+      ]
+    },
+    "Crown Wilton": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Gold",
+        "Maroon",
+        "Beige",
+        "Brown"
+      ]
+    },
+    "Manifesto": {
+      "Colour": [
+        "Gold",
+        "Maroon",
+        "Brown",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ]
+    },
+    "Pebblestone": {
+      "Colour": [
+        "Gold",
+        "Grey",
+        "Brown",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ]
+    }
+  },
+  "cut-plain": {
+    "Velvet": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Gold",
+        "Maroon",
+        "Grey",
+        "Beige",
+        "Red",
+        "Black"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Royal Salute": {
+      "Colour": [
+        "Blue",
+        "Gold",
+        "Grey",
+        "Beige",
+        "Brown",
+        "Red"
+      ]
+    },
+    "Royal Iconic": {
+      "Colour": [
+        "Blue",
+        "Gold",
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Material": [
+        "Nylon"
+      ]
+    },
+    "Royal Satin": {
+      "Colour": [
+        "Blue",
+        "Gold",
+        "Maroon",
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Royal Gloria": {
+      "Colour": [
+        "Grey",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    },
+    "Royal Monaco": {
+      "Colour": [
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    },
+    "Royal Soft": {
+      "Colour": [
+        "Grey",
+        "Beige",
+        "Brown"
+      ]
+    },
+    "Royal Aryona": {
+      "Colour": [
+        "Grey",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    },
+    "Royal Queen II": {
+      "Colour": [
+        "Maroon",
+        "Grey",
+        "Beige",
+        "Black"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    },
+    "Royal Delilia": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Royal Dolce": {
+      "Colour": [
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Royal Luxore": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Texture": [
+        "Cut loop"
+      ],
+      "Material": [
+        "Nylon"
+      ]
+    },
+    "Royal Magic": {
+      "Colour": [
+        "Grey",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Lugano Shaggy": {
+      "Colour": [
+        "Grey",
+        "Beige",
+        "Brown",
+        "Black"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    },
+    "Royal Majestic II": {
+      "Colour": [
+        "Blue",
+        "Gold",
+        "Grey",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Nylon"
+      ]
+    },
+    "Royal Silk": {
+      "Colour": [
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Royal Romeo II": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Nylon"
+      ]
+    },
+    "Royal Amaryll": {
+      "Colour": [
+        "Maroon",
+        "Grey",
+        "Beige",
+        "Black"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Nylon"
+      ]
+    },
+    "Rich": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Gold",
+        "Maroon",
+        "Brown"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ]
+    },
+    "New Royal Majestic": {
+      "Colour": [
+        "Green",
+        "Maroon",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Nylon"
+      ]
+    }
+  },
+  "mosque": {
+    "Sulaimani Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Red"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ]
+    },
+    "Biduri Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Material": [
+        "Olefin",
+        "Polypropylene"
+      ]
+    },
+    "Qariah Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Gold",
+        "Maroon"
+      ]
+    },
+    "Al Salam Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Gold",
+        "Maroon"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ]
+    },
+    "Bahara Mosque": {
+      "Colour": [
+        "Green",
+        "Gold",
+        "Beige",
+        "Red"
+      ]
+    },
+    "Boukhara Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Gold",
+        "Maroon"
+      ]
+    },
+    "Byram Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Gold",
+        "Red"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Jazbah Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon"
+      ]
+    },
+    "Jazeera Mosque": {
+      "Colour": [
+        "Green",
+        "Gold",
+        "Maroon"
+      ]
+    },
+    "Jannat Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Kameel Raudah Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon"
+      ]
+    },
+    "Kaayna Raudah Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Gold",
+        "Maroon"
+      ]
+    },
+    "Mahek Mosque": {
+      "Colour": [
+        "Green",
+        "Maroon"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Mashal Mosque": {
+      "Colour": [
+        "Green",
+        "Maroon"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Malyka Mosque": {
+      "Colour": [
+        "Green",
+        "Maroon",
+        "Grey"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Muneera Raudah Mosque": {
+      "Colour": [
+        "Green",
+        "Red"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Mehnaaz Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Myasheen Mosque": {
+      "Colour": [
+        "Green",
+        "Maroon",
+        "Beige"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Mansoura Raudah Mosque": {
+      "Colour": [
+        "Green",
+        "Gold",
+        "Maroon"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Muzzafar Raudah Medallion Mosque": {
+      "Colour": [
+        "Green",
+        "Gold",
+        "Maroon",
+        "Grey"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Taafiz Raudah Mosque": {
+      "Colour": [
+        "Green",
+        "Red"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Tasbih Raudah Medallion Mosque": {
+      "Colour": [
+        "Green",
+        "Red"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Umraz Raudah Mosque": {
+      "Colour": [
+        "Green",
+        "Red"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Yasin Rawdah Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon",
+        "Beige"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    },
+    "Qom Persian Raudah Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Beige",
+        "Red"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Olefin",
+        "Wool"
+      ]
+    },
+    "Qom Rasoul Raudah Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Beige",
+        "Red"
+      ],
+      "Roll width": [
+        "4 m"
+      ],
+      "Material": [
+        "Olefin",
+        "Wool"
+      ]
+    },
+    "Zareena Mosque": {
+      "Colour": [
+        "Green",
+        "Beige",
+        "Red"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Rumi Round Mosque": {
+      "Colour": [
+        "Gold"
+      ]
+    },
+    "Yasin Raudah Round Mosque": {
+      "Colour": [
+        "Green",
+        "Maroon"
+      ]
+    },
+    "Gulzar Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Ghalib Mosque": {
+      "Colour": [
+        "Blue",
+        "Gold",
+        "Maroon"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Guzarish Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon",
+        "Grey"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Mecca Aisyah Mosque": {
+      "Colour": [
+        "Maroon"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Muzdaliana Mosque": {
+      "Colour": [
+        "Green",
+        "Maroon",
+        "Beige"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Madinah Raudah Mosque": {
+      "Colour": [
+        "Maroon"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Pareeza Mosque": {
+      "Colour": [
+        "Green",
+        "Maroon"
+      ]
+    },
+    "Payazhan Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon"
+      ]
+    },
+    "Rizwana Raudhah Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    },
+    "Rafeeq Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    },
+    "Soraiya Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Gold",
+        "Maroon"
+      ]
+    },
+    "Saifyee Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Gold",
+        "Maroon"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Salima Mosque": {
+      "Colour": [
+        "Green",
+        "Maroon",
+        "Beige",
+        "Brown"
+      ],
+      "Material": [
+        "Olefin"
+      ]
+    },
+    "Yasmin Mosque": {
+      "Colour": [
+        "Green",
+        "Maroon"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    },
+    "Yunisia Mosque": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Red"
+      ],
+      "Roll width": [
+        "4 m"
+      ]
+    }
+  },
+  "loop": {
+    "Cambridge": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Grey",
+        "Beige",
+        "Brown",
+        "Red"
+      ],
+      "Texture": [
+        "Loop pile"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Matahari": {
+      "Colour": [
+        "Red"
+      ]
+    },
+    "Patriot": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Grey",
+        "Beige",
+        "Red"
+      ],
+      "Texture": [
+        "Loop pile"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Elevation": {
+      "Colour": [
+        "Grey",
+        "Beige",
+        "Red",
+        "Black"
+      ],
+      "Texture": [
+        "Loop pile"
+      ],
+      "Material": [
+        "Polypropylene"
+      ]
+    },
+    "Panama": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Brown",
+        "Red"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Graphic loop",
+        "Loop pile"
+      ]
+    },
+    "Sapporo": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Grey",
+        "Beige",
+        "Red",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Graphic loop",
+        "Loop pile"
+      ]
+    },
+    "Tobago": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Beige",
+        "Brown",
+        "Red",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Graphic loop",
+        "Loop pile"
+      ]
+    },
+    "Tokyo": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Gold",
+        "Grey",
+        "Red",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Graphic loop",
+        "Loop pile"
+      ]
+    },
+    "Binjai": {
+      "Colour": [
+        "Blue",
+        "Maroon",
+        "Grey",
+        "Brown",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    },
+    "Bubbles": {
+      "Colour": [
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop",
+        "Loop pile"
+      ]
+    },
+    "Cherokee": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Brown"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    },
+    "Chipotle": {
+      "Colour": [
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    },
+    "Crystal Cubes": {
+      "Colour": [
+        "Maroon",
+        "Grey",
+        "Beige"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Cut loop"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Crystal Jewel": {
+      "Colour": [
+        "Maroon",
+        "Grey",
+        "Beige"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Cut loop"
+      ],
+      "Material": [
+        "Polyester"
+      ]
+    },
+    "Dallas": {
+      "Colour": [
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    },
+    "Deco": {
+      "Colour": [
+        "Blue",
+        "Brown",
+        "Red",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop",
+        "Cut loop"
+      ]
+    },
+    "Domino Dice": {
+      "Colour": [
+        "Brown",
+        "Red",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    },
+    "Domino Checks": {
+      "Colour": [
+        "Blue",
+        "Brown",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    },
+    "Matrix-2": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon",
+        "Brown"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    },
+    "Memphis": {
+      "Colour": [
+        "Grey",
+        "Brown",
+        "Red"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    },
+    "Mirage": {
+      "Colour": [
+        "Maroon",
+        "Grey",
+        "Brown"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    },
+    "Nile": {
+      "Colour": [
+        "Grey",
+        "Beige",
+        "Brown",
+        "Red",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop",
+        "Loop pile"
+      ]
+    },
+    "Orbital": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Beige",
+        "Brown",
+        "Red",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop",
+        "Loop pile"
+      ]
+    },
+    "Palladio": {
+      "Colour": [
+        "Grey",
+        "Beige",
+        "Red"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    },
+    "Pavilion": {
+      "Colour": [
+        "Blue",
+        "Maroon",
+        "Grey",
+        "Brown",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    },
+    "Poseidon": {
+      "Colour": [
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop",
+        "Loop pile"
+      ]
+    },
+    "Splendor": {
+      "Colour": [
+        "Blue",
+        "Maroon",
+        "Grey",
+        "Beige",
+        "Brown",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop",
+        "Loop pile"
+      ]
+    },
+    "Tetris": {
+      "Colour": [
+        "Grey",
+        "Brown",
+        "Red",
+        "Black"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    },
+    "Victory Park": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Brown",
+        "Red",
+        "Black"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    },
+    "Vivaldi": {
+      "Colour": [
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop",
+        "Loop pile"
+      ]
+    },
+    "Vortex": {
+      "Colour": [
+        "Maroon",
+        "Grey",
+        "Beige",
+        "Brown",
+        "Black"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop",
+        "Loop pile"
+      ]
+    },
+    "Olympus": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Gold",
+        "Maroon",
+        "Grey",
+        "Beige",
+        "Brown",
+        "Red"
+      ],
+      "Roll width": [
+        "3.66 m"
+      ],
+      "Texture": [
+        "Scroll loop"
+      ]
+    }
+  },
+  "tiles": {
+    "Essential-S": {
+      "Colour": [
+        "Blue",
+        "Gold",
+        "Grey",
+        "Beige",
+        "Red"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Essential-Plus": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Grey",
+        "Beige",
+        "Red"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Essential-Neo": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Maroon",
+        "Grey",
+        "Beige",
+        "Red"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Dazzle-S": {
+      "Colour": [
+        "Grey",
+        "Brown",
+        "Black"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Athenia-S": {
+      "Colour": [
+        "Grey",
+        "Brown",
+        "Black"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Tryton-S": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Beige",
+        "Brown",
+        "Red"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Nexus-S": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Grey",
+        "Brown",
+        "Red"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Stratonia-S": {
+      "Colour": [
+        "Grey",
+        "Brown",
+        "Black"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Pandora-S": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Beige",
+        "Brown",
+        "Black"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Orion-S": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Beige",
+        "Brown",
+        "Black"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Omnia-S": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Beige"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Pantheron-S": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Brown",
+        "Black"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Jupiter-P": {
+      "Colour": [
+        "Blue",
+        "Black"
+      ],
+      "Size": [
+        "25 × 100 cm"
+      ]
+    },
+    "Mercura-P": {
+      "Colour": [
+        "Blue",
+        "Green",
+        "Grey",
+        "Brown",
+        "Red",
+        "Black"
+      ],
+      "Size": [
+        "25 × 100 cm"
+      ]
+    },
+    "Planetary-S": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Brown"
+      ],
+      "Size": [
+        "25 × 100 cm"
+      ]
+    },
+    "Mystery-S": {
+      "Colour": [
+        "Blue",
+        "Gold",
+        "Grey",
+        "Beige",
+        "Brown",
+        "Red"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Horizon-S": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Beige",
+        "Brown",
+        "Red"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Linear-S": {
+      "Colour": [
+        "Blue",
+        "Grey",
+        "Beige",
+        "Brown"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    },
+    "Nebula-S": {
+      "Colour": [
+        "Gold",
+        "Grey",
+        "Beige",
+        "Brown",
+        "Black"
+      ],
+      "Size": [
+        "50 × 50 cm"
+      ]
+    }
+  }
+}
