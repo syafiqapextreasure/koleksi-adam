@@ -243,3 +243,33 @@
     transform: none;
   }
 }
+
+.anniversary-strip {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1280 / 208;
+  background: #2b4577 url("/images/malaysia-anniversary.svg") center / 100% 100% no-repeat;
+  color: white;
+}
+.anniversary-strip p {
+  margin: 0 3% 0 38%;
+  font-size: clamp(14px, 2.7vw, 82px);
+  font-weight: 700;
+  line-height: 1.18;
+  text-transform: uppercase;
+  letter-spacing: -.035em;
+}
+.review-total { display: block; font-variant-numeric: tabular-nums; }
+.review-count-accessible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+@media (max-width: 650px) {
+  .anniversary-strip { min-height: 80px; }
+}

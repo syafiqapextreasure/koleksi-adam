@@ -1,0 +1,104 @@
+{
+  "collection-hero-0.webp": {
+    "src": "/images/catalogue-scenes/loop-pile-weave-1784-06e663cb.webp",
+    "srcSet": "/images/catalogue-scenes/loop-pile-weave-640-9fea2468.webp 640w, /images/catalogue-scenes/loop-pile-weave-1120-54e14d7c.webp 1120w, /images/catalogue-scenes/loop-pile-weave-1784-06e663cb.webp 1784w",
+    "width": 1784,
+    "height": 793
+  },
+  "collection-hero-1.webp": {
+    "src": "/images/catalogue-scenes/commercial-carpet-tiles-2400-6642971b.webp",
+    "srcSet": "/images/catalogue-scenes/commercial-carpet-tiles-640-b428feec.webp 640w, /images/catalogue-scenes/commercial-carpet-tiles-1120-ea2ab396.webp 1120w, /images/catalogue-scenes/commercial-carpet-tiles-1760-27babe82.webp 1760w, /images/catalogue-scenes/commercial-carpet-tiles-2400-6642971b.webp 2400w",
+    "width": 2400,
+    "height": 1066
+  },
+  "collection-hero-2.webp": {
+    "src": "/images/catalogue-scenes/patterned-cut-pile-interior-1600-83cd6d26.webp",
+    "srcSet": "/images/catalogue-scenes/patterned-cut-pile-interior-640-ac2ead30.webp 640w, /images/catalogue-scenes/patterned-cut-pile-interior-1120-0e813c45.webp 1120w, /images/catalogue-scenes/patterned-cut-pile-interior-1600-83cd6d26.webp 1600w",
+    "width": 1600,
+    "height": 711
+  },
+  "collection-hero-3.webp": {
+    "src": "/images/catalogue-scenes/plain-cut-pile-carpet-2400-35e8a460.webp",
+    "srcSet": "/images/catalogue-scenes/plain-cut-pile-carpet-640-5bf8c89b.webp 640w, /images/catalogue-scenes/plain-cut-pile-carpet-1120-d3abd992.webp 1120w, /images/catalogue-scenes/plain-cut-pile-carpet-1760-819787fc.webp 1760w, /images/catalogue-scenes/plain-cut-pile-carpet-2400-35e8a460.webp 2400w",
+    "width": 2400,
+    "height": 1067
+  },
+  "collection-hero-4.webp": {
+    "src": "/images/catalogue-scenes/clearance-prayer-carpet-2400-fe241290.webp",
+    "srcSet": "/images/catalogue-scenes/clearance-prayer-carpet-640-08f35fdd.webp 640w, /images/catalogue-scenes/clearance-prayer-carpet-1120-e6641527.webp 1120w, /images/catalogue-scenes/clearance-prayer-carpet-1760-586f1b0b.webp 1760w, /images/catalogue-scenes/clearance-prayer-carpet-2400-fe241290.webp 2400w",
+    "width": 2400,
+    "height": 1067
+  },
+  "ghazal": {
+    "src": "/images/catalogue-scenes/blue-prayer-row-carpet-2400-f50c221e.webp",
+    "srcSet": "/images/catalogue-scenes/blue-prayer-row-carpet-640-10f5bc41.webp 640w, /images/catalogue-scenes/blue-prayer-row-carpet-1120-0015cebe.webp 1120w, /images/catalogue-scenes/blue-prayer-row-carpet-1760-949d1058.webp 1760w, /images/catalogue-scenes/blue-prayer-row-carpet-2400-f50c221e.webp 2400w",
+    "width": 2400,
+    "height": 1067
+  },
+  "mosque-red-carpet": {
+    "src": "/images/catalogue-scenes/mosque-red-prayer-rows-2400-6379de28.webp",
+    "srcSet": "/images/catalogue-scenes/mosque-red-prayer-rows-640-15fc0f15.webp 640w, /images/catalogue-scenes/mosque-red-prayer-rows-1120-25bb82aa.webp 1120w, /images/catalogue-scenes/mosque-red-prayer-rows-1760-272e856f.webp 1760w, /images/catalogue-scenes/mosque-red-prayer-rows-2400-6379de28.webp 2400w",
+    "width": 2400,
+    "height": 1067
+  },
+  "flooring-installation": {
+    "src": "/images/catalogue-scenes/laminate-floor-interior-1200-d0fa185b.webp",
+    "srcSet": "/images/catalogue-scenes/laminate-floor-interior-640-bd2ecb28.webp 640w, /images/catalogue-scenes/laminate-floor-interior-1200-d0fa185b.webp 1200w",
+    "width": 1200,
+    "height": 533
+  },
+  "iconic-carbon": {
+    "src": "/images/catalogue-scenes/carbon-carpet-interior-1774-fb184d7b.webp",
+    "srcSet": "/images/catalogue-scenes/carbon-carpet-interior-640-35f16b9a.webp 640w, /images/catalogue-scenes/carbon-carpet-interior-1120-309aae9f.webp 1120w, /images/catalogue-scenes/carbon-carpet-interior-1774-fb184d7b.webp 1774w",
+    "width": 1774,
+    "height": 887
+  },
+  "blog-floor.png": {
+    "src": "/images/catalogue-scenes/laminate-flooring-guide-1774-c9161d01.webp",
+    "srcSet": "/images/catalogue-scenes/laminate-flooring-guide-640-e3975676.webp 640w, /images/catalogue-scenes/laminate-flooring-guide-1120-85ecbcb0.webp 1120w, /images/catalogue-scenes/laminate-flooring-guide-1774-c9161d01.webp 1774w",
+    "width": 1774,
+    "height": 887
+  },
+  "underlay": {
+    "src": "/images/catalogue-scenes/carpet-underlay-1462-a7f48bb4.webp",
+    "srcSet": "/images/catalogue-scenes/carpet-underlay-640-74fa0cf7.webp 640w, /images/catalogue-scenes/carpet-underlay-1120-3af6306b.webp 1120w, /images/catalogue-scenes/carpet-underlay-1462-a7f48bb4.webp 1462w",
+    "width": 1462,
+    "height": 650
+  },
+  "about-carpet": {
+    "src": "/images/catalogue-scenes/blue-carpet-installation-1254-f5559e4c.webp",
+    "srcSet": "/images/catalogue-scenes/blue-carpet-installation-640-c6b681aa.webp 640w, /images/catalogue-scenes/blue-carpet-installation-1120-7b0925d6.webp 1120w, /images/catalogue-scenes/blue-carpet-installation-1254-f5559e4c.webp 1254w",
+    "width": 1254,
+    "height": 1254
+  },
+  "mosque-kebun-baru": {
+    "src": "/images/catalogue-scenes/green-mosque-installation-1197-09d1aada.webp",
+    "srcSet": "/images/catalogue-scenes/green-mosque-installation-640-bff2f2ce.webp 640w, /images/catalogue-scenes/green-mosque-installation-1197-09d1aada.webp 1197w",
+    "width": 1197,
+    "height": 887
+  },
+  "athenia": {
+    "src": "/images/catalogue-scenes/athenia-office-carpet-1245-5523a492.webp",
+    "srcSet": "/images/catalogue-scenes/athenia-office-carpet-640-61b033d5.webp 640w, /images/catalogue-scenes/athenia-office-carpet-1120-5b9530d5.webp 1120w, /images/catalogue-scenes/athenia-office-carpet-1245-5523a492.webp 1245w",
+    "width": 1245,
+    "height": 1245
+  },
+  "hilora": {
+    "src": "/images/catalogue-scenes/hilora-office-tiles-1238-d52c64f7.webp",
+    "srcSet": "/images/catalogue-scenes/hilora-office-tiles-640-e26a4b65.webp 640w, /images/catalogue-scenes/hilora-office-tiles-1238-d52c64f7.webp 1238w",
+    "width": 1238,
+    "height": 1238
+  },
+  "kaayna-maroon": {
+    "src": "/images/catalogue-scenes/kaayna-raudah-mosque-1440-971219c1.webp",
+    "srcSet": "/images/catalogue-scenes/kaayna-raudah-mosque-640-4fcf0eb9.webp 640w, /images/catalogue-scenes/kaayna-raudah-mosque-1120-715537fa.webp 1120w, /images/catalogue-scenes/kaayna-raudah-mosque-1440-971219c1.webp 1440w",
+    "width": 1440,
+    "height": 960
+  },
+  "royal-iconic-white": {
+    "src": "/images/catalogue-scenes/royal-iconic-room-740-17aaa45f.webp",
+    "srcSet": "/images/catalogue-scenes/royal-iconic-room-640-9bf8939f.webp 640w, /images/catalogue-scenes/royal-iconic-room-740-17aaa45f.webp 740w",
+    "width": 740,
+    "height": 862
+  }
+}

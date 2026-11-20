@@ -1,4 +1,6 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import restoredHeroes from "../data/restored-heroes.json";
+import cataloguePhotos from "../data/catalogue-photos.json";
+import { createContext, useContext, useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import reviews from "../data/google-reviews.json";
 import installations from "../data/installation-projects.json";
@@ -39,6 +41,14 @@ function Go({ to = "", children, ...props }) {
     </Link>
   );
 }
+function RestoredImage({ image, alt, ...props }) {
+  return (
+    <picture>
+      <source type="image/avif" srcSet={image.srcSet.replaceAll(".webp", ".avif")} sizes="100vw" />
+      <img {...image} sizes="100vw" alt={alt} {...props} />
+    </picture>
+  );
+}
 function Hero({ title, photo, desc, home = false, children }) {
   const artwork = {
     "mosque-hero": "mosque-red-carpet",
@@ -47,18 +57,23 @@ function Hero({ title, photo, desc, home = false, children }) {
     "blog-home.png": "prayer-rug-display",
     "blog-floor.png": "blog-floor.png",
   }[photo];
+  const key = artwork || photo;
+  const imageProps = {
+    className: "heroimage " + (artwork ? "pregraded" : ""),
+    alt: title,
+    fetchPriority: "high",
+  };
   return (
     <header
       className={
         "hero " + (home ? "homehero " : "") + (artwork ? "photohero" : "")
       }
     >
-      <img
-        className={"heroimage " + (artwork ? "pregraded" : "")}
-        src={img(artwork || photo)}
-        alt={title}
-        fetchPriority="high"
-      />
+      {restoredHeroes[key] ? (
+        <RestoredImage image={restoredHeroes[key]} {...imageProps} />
+      ) : (
+        <img src={img(key)} {...cataloguePhotos[key]} sizes="100vw" {...imageProps} />
+      )}
       <div className="wrap">
         <h1>{title}</h1>
         {desc && <p>{desc}</p>}
@@ -537,13 +552,54 @@ const mapUrl =
 function FlagStrip() {
   const { t } = useSite();
   return (
-    <div className="flagstrip">
-      <img src={img("malaysia-banner")} alt="" />
-      {t(
-        "Proudly serving Malaysia for the past 15 years",
-        "Berkhidmat untuk Malaysia selama 15 tahun",
-      )}
+    <div className="anniversary-strip">
+      <p>
+        {t("Proudly serving Malaysia", "Berkhidmat untuk Malaysia")}
+        <br />
+        {t("for the past 15 years", "selama 15 tahun")}
+      </p>
     </div>
+  );
+}
+// Google Maps place 0x31cc53445dcb38d5:0x94711ce22eab7efe, checked 21 Nov 2026.
+const googleReviewCount = 162;
+function ReviewCount() {
+  const { t } = useSite();
+  const ref = useRef(null);
+  const [count, setCount] = useState(googleReviewCount);
+  useEffect(() => {
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (motion.matches || !window.IntersectionObserver) return;
+    let frame;
+    function finish() {
+      cancelAnimationFrame(frame);
+      setCount(googleReviewCount);
+    }
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      observer.disconnect();
+      if (motion.matches) return;
+      const start = performance.now();
+      function advance(now) {
+        const progress = Math.min(1, (now - start) / 850);
+        setCount(Math.round(googleReviewCount * (1 - (1 - progress) ** 3)));
+        if (progress < 1) frame = requestAnimationFrame(advance);
+      }
+      frame = requestAnimationFrame(advance);
+    });
+    observer.observe(ref.current);
+    motion.addEventListener("change", finish);
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(frame);
+      motion.removeEventListener("change", finish);
+    };
+  }, []);
+  return (
+    <span ref={ref} className="review-total" title={t("Checked 21 November 2026", "Disemak 21 November 2026")}>
+      <span aria-hidden="true">{count} {t("Google reviews", "ulasan Google")}</span>
+      <span className="review-count-accessible">{googleReviewCount} {t("Google reviews", "ulasan Google")}</span>
+    </span>
   );
 }
 function Reviews() {
@@ -562,6 +618,7 @@ function Reviews() {
             <br />
             <b>4.9 ★★★★★</b>
             <br />
+            <ReviewCount />
             {t("See all reviews", "Lihat semua ulasan")}
           </span>
         </a>
@@ -791,7 +848,8 @@ function BlogCards({ indices = [0, 1, 2, 3, 4, 5], compact = false }) {
 function HomeSlider() {
   const { t } = useSite(),
     [n, set] = useState(0),
-    [playing, play] = useState(false);
+    [playing, play] = useState(false),
+    [loaded, setLoaded] = useState([0]);
   useEffect(() => {
     play(!window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   }, []);
@@ -800,6 +858,12 @@ function HomeSlider() {
     const timer = setInterval(() => set((i) => (i + 1) % 4), 6500);
     return () => clearInterval(timer);
   }, [playing]);
+  useEffect(() => {
+    if (!playing) return;
+    const next = (n + 1) % 4;
+    const timer = setTimeout(() => setLoaded(ids => ids.includes(next) ? ids : [...ids, next]), 3200);
+    return () => clearTimeout(timer);
+  }, [n, playing]);
   const slides = [
     ["Mosque Carpets", "Karpet Masjid", "mosque-prayer-hall"],
     ["Mosque Carpets", "Karpet Masjid", "mosque-red-rows"],
@@ -807,6 +871,7 @@ function HomeSlider() {
     ["Washable Rugs", "Permaidani Boleh Basuh", "washable-prayer-rugs"],
   ];
   const change = (i) => {
+    setLoaded(ids => ids.includes(i) ? ids : [...ids, i]);
     set(i);
     play(false);
   };
@@ -826,21 +891,10 @@ function HomeSlider() {
             className={"slidephoto " + (n === i ? "current" : "")}
             aria-hidden={n !== i}
           >
-            <img
-              src={"/images/" + photo + ".webp"}
-              srcSet={
-                "/images/" +
-                photo +
-                "-mobile.webp 520w, /images/" +
-                photo +
-                ".webp 887w"
-              }
-              sizes="100vw"
-              alt={t(en, ms)}
-              width="887"
-              height="444"
-              fetchPriority={i === 0 ? "high" : "auto"}
-            />
+            {(i === n || loaded.includes(i)) && (
+              <RestoredImage image={restoredHeroes[photo]} alt={t(en, ms)}
+                fetchPriority={i === 0 ? "high" : "low"} />
+            )}
           </div>
         ))}
         <div className="wrap">
@@ -980,7 +1034,7 @@ function Services() {
     ["freeway.png", "home-installation"],
     ["mosque-dengkil", "mosque-klang"],
     ["floor-home.png", "floor-school.png"],
-    ["office-1.png", "office-2.png"],
+    ["office-open-plan", "office-meeting-room"],
   ];
   return (
     <div className="expertise">
@@ -1004,7 +1058,17 @@ function Services() {
       <div className="gallery">
         {photos[selected].map((p, k) => (
           <Go to={routes[selected]} key={p}>
-            <img src={img(p)} alt={title(routes[selected]) + " · " + (k + 1)} />
+            {selected === 3 ? (
+              <img
+                src={"/images/" + p + "-1200.webp"}
+                srcSet={[600, 1200, 1600].map(w => "/images/" + p + "-" + w + ".webp " + w + "w").join(", ")}
+                sizes="(min-width: 1900px) 780px, 44vw"
+                width="1200" height="1200" loading="lazy" decoding="async"
+                alt={k === 0 ? t("Carpet tiles throughout an open-plan office", "Jubin karpet di pejabat pelan terbuka") : t("Textured carpet tiles in a meeting room", "Jubin karpet bertekstur di bilik mesyuarat")}
+              />
+            ) : (
+              <img src={img(p)} alt={title(routes[selected]) + " · " + (k + 1)} />
+            )}
           </Go>
         ))}
       </div>
@@ -1034,8 +1098,15 @@ function AdditionalServices() {
           />
         </div>
         <img
-          src={img(["about-carpet", "mosque-kebun-baru", "athenia"][n])}
-          alt={names[n]}
+          {...cataloguePhotos[["about-carpet", "mosque-kebun-baru", "athenia"][n]]}
+          sizes="(max-width: 650px) 92vw, (max-width: 1900px) 46vw, 860px"
+          loading="lazy"
+          decoding="async"
+          alt={[
+            t("Blue carpet with gold floral borders", "Karpet biru dengan sempadan bunga keemasan"),
+            t("Green prayer-row carpet in a mosque", "Karpet saf hijau di masjid"),
+            t("Installed carpet tiles around office workstations", "Jubin karpet dipasang di ruang kerja pejabat"),
+          ][n]}
         />
       </div>
     </Group>
@@ -1506,6 +1577,8 @@ function Product({ i }) {
           <figure>
             <img
               src={img(selected ? swatch : p.img)}
+              {...(!selected && cataloguePhotos[p.img === "iconic-white" ? "royal-iconic-white" : p.img])}
+              sizes="(max-width: 650px) 92vw, (max-width: 1900px) 44vw, 790px"
               alt={p.name + " · " + name}
             />
             <figcaption>{p.source}</figcaption>

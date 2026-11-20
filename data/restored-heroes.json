@@ -1,0 +1,44 @@
+{
+  "mosque-prayer-hall": {
+    "src": "/images/hero/mosque-prayer-hall-1080.webp",
+    "srcSet": "/images/hero/mosque-prayer-hall-640.webp 640w, /images/hero/mosque-prayer-hall-1080.webp 1080w, /images/hero/mosque-prayer-hall-1774.webp 1774w",
+    "width": 1774,
+    "height": 887
+  },
+  "mosque-red-rows": {
+    "src": "/images/hero/mosque-red-rows-1080.webp",
+    "srcSet": "/images/hero/mosque-red-rows-640.webp 640w, /images/hero/mosque-red-rows-1080.webp 1080w, /images/hero/mosque-red-rows-1774.webp 1774w",
+    "width": 1774,
+    "height": 887
+  },
+  "bestseller-prayer-carpet": {
+    "src": "/images/hero/bestseller-prayer-carpet-1080.webp",
+    "srcSet": "/images/hero/bestseller-prayer-carpet-640.webp 640w, /images/hero/bestseller-prayer-carpet-1080.webp 1080w, /images/hero/bestseller-prayer-carpet-1774.webp 1774w",
+    "width": 1774,
+    "height": 887
+  },
+  "washable-prayer-rugs": {
+    "src": "/images/hero/washable-prayer-rugs-1080.webp",
+    "srcSet": "/images/hero/washable-prayer-rugs-640.webp 640w, /images/hero/washable-prayer-rugs-1080.webp 1080w, /images/hero/washable-prayer-rugs-1774.webp 1774w",
+    "width": 1774,
+    "height": 887
+  },
+  "showroom-prayer-hall": {
+    "src": "/images/hero/showroom-prayer-hall-1080.webp",
+    "srcSet": "/images/hero/showroom-prayer-hall-640.webp 640w, /images/hero/showroom-prayer-hall-1080.webp 1080w, /images/hero/showroom-prayer-hall-1774.webp 1774w",
+    "width": 1774,
+    "height": 566
+  },
+  "prayer-rug-display": {
+    "src": "/images/hero/prayer-rug-display-1080.webp",
+    "srcSet": "/images/hero/prayer-rug-display-640.webp 640w, /images/hero/prayer-rug-display-1080.webp 1080w, /images/hero/prayer-rug-display-1774.webp 1774w",
+    "width": 1774,
+    "height": 887
+  },
+  "iconic-white": {
+    "src": "/images/hero/iconic-white-1080.webp",
+    "srcSet": "/images/hero/iconic-white-640.webp 640w, /images/hero/iconic-white-1080.webp 1080w, /images/hero/iconic-white-1774.webp 1774w",
+    "width": 1774,
+    "height": 887
+  }
+}
