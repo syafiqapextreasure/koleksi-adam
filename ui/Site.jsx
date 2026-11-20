@@ -66,7 +66,7 @@ function Hero({ title, photo, desc, home = false, children }) {
   return (
     <header
       className={
-        "hero " + (home ? "homehero " : "") + (artwork ? "photohero" : "")
+        "hero " + (home ? "homehero " : "") + (photo === "contact-samples" ? "contacthero " : "") + (artwork ? "photohero" : "")
       }
     >
       {restoredHeroes[key] ? (
@@ -943,9 +943,6 @@ function Home() {
           </p>
         </div>
         <div className="tourplayer">
-          <span className="tourlabel">
-            {t("Installation photo tour · Illustrated cover", "Tayangan foto pemasangan · Ilustrasi muka depan")}
-          </span>
           <video
             onPlay={() => setPaused(false)}
             onPause={() => setPaused(true)}
@@ -1209,7 +1206,7 @@ const facetBM = {
   Polypropylene: "Polipropilena",
   Wool: "Bulu biri-biri",
 };
-function Chips({ options, value, onChange, label }) {
+function Chips({ options, value, onChange, label, children }) {
   return (
     <div className="chips" role="group" aria-label={label}>
       {options.map((s, k) => (
@@ -1222,6 +1219,7 @@ function Chips({ options, value, onChange, label }) {
           {s}
         </button>
       ))}
+      {children}
     </div>
   );
 }
@@ -1274,7 +1272,6 @@ function Category({ i, families }) {
   const { t, bm } = useSite();
   const [facet, choose] = useState(0),
     [value, select] = useState("");
-  const [visibleFamilies, setVisibleFamilies] = useState(0);
   const labels = [
     ["All loop pile", "Colour", "Texture", "Roll width"],
     ["All tiles", "50 × 50 cm", "25 × 100 cm", "Colour"],
@@ -1410,7 +1407,6 @@ function Category({ i, families }) {
     }[e.title];
     return {
       name: e.title,
-      familyName: family?.name,
       category: bm
         ? [
             catBM[0],
@@ -1443,22 +1439,13 @@ function Category({ i, families }) {
         select("");
       }}
       label={t("Collection filters", "Penapis koleksi")}
-    />
+    >
+      <Btn href={pdf(i)}>{t("Explore the full catalogue", "Terokai katalog lengkap")}</Btn>
+    </Chips>
   );
-  const remainingFamilies = families.filter(family => !cards.some(card => card.familyName === family.name));
   const result =
     facet === 0 ? (
-      <>
-        <Cards items={cards} />
-        {visibleFamilies > 0 && <FamilyGrid category={i} rows={remainingFamilies.slice(0, visibleFamilies)} />}
-        {visibleFamilies < remainingFamilies.length && (
-          <div className="actions">
-            <button className="btn" type="button" onClick={() => setVisibleFamilies(count => count + 12)}>
-              {t("Show more collections", "Lihat lebih banyak koleksi")} ({remainingFamilies.length - visibleFamilies})
-            </button>
-          </div>
-        )}
-      </>
+      <Cards items={cards} />
     ) : name === "Clearance" ? (
       <CategoryCards indices={[5]} />
     ) : (
@@ -1533,13 +1520,6 @@ function Category({ i, families }) {
             )}
           </p>
         )}
-        <div className="actions">
-          <Btn href={pdf(i)}>
-            {mosque
-              ? t("View 2026 mosque catalogue", "Lihat katalog masjid 2026")
-              : t("Explore the full catalogue", "Terokai katalog lengkap")}
-          </Btn>
-        </div>
       </Group>
       {mosque && (
         <>
@@ -1780,7 +1760,7 @@ function More({ page }) {
       </>
     );
   if (page === "contact")
-    return <Hero title={title(page)} photo="showroom-prayer-hall" />;
+    return <Hero title={title(page)} photo="contact-samples" />;
   if (page === "blog")
     return (
       <>
@@ -1900,7 +1880,6 @@ function InstallationAlbum({ project }) {
           alt={`${name} — ${stage(current)}`}
           width={current.width}
           height={current.height}
-          style={{ "--original-width": `${current.width}px` }}
           loading="lazy"
           decoding="async"
         />

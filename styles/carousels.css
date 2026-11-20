@@ -68,18 +68,6 @@
 .slider:is(:hover, :focus-within) .slidecontrols button:last-child {
   opacity: 1;
 }
-.tourlabel {
-  position: absolute;
-  z-index: 1;
-  bottom: 52px;
-  left: 18px;
-  color: white;
-  background: #15243bc4;
-  padding: 3px 10px;
-  border-radius: 4px;
-  font-size: 13px;
-  pointer-events: none;
-}
 .expertise > p {
   margin: 18px auto 34px;
 }

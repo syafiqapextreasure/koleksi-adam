@@ -100,5 +100,11 @@
     "srcSet": "/images/catalogue-scenes/royal-iconic-room-640-9bf8939f.webp 640w, /images/catalogue-scenes/royal-iconic-room-740-17aaa45f.webp 740w",
     "width": 740,
     "height": 862
+  },
+  "contact-samples": {
+    "src": "/images/contact-swatch-table-2022.webp",
+    "srcSet": "/images/contact-swatch-table-640.webp 640w, /images/contact-swatch-table-1120.webp 1120w, /images/contact-swatch-table-2022.webp 2022w",
+    "width": 2022,
+    "height": 778
   }
 }
